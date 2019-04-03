@@ -1,0 +1,22 @@
+﻿
+    <div class="content-box-large">
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped table-advance flip-content"  at-table at-paginated at-list="ObtenerEventosAll" at-config="configListEventos"
+                        style="max-width:100%;">
+                    <thead>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td at-title="ID" width="2%"><font color="black" size="2px">{{item.idEvento}}</font></td>
+                            <td at-title="Evento" width="25%"><font color="black" size="2px">{{item.Nombre}}</font></td>                
+                            <td at-title="Estado del Evento" width="8%"><font color="black" size="2px">{{item.valorEstado.Descripcion}}</font></td>
+                            <td at-title="Fecha Inicio" width="8%"><font color="black" size="2px">{{item.fechaInicio}}</font></td>
+                            <td at-title="Fecha Final" width="8%"><font color="black" size="2px">{{item.fechaFin}}</font></td>
+                        </tr>
+                    </tbody>
+                </table>
+                    <at-pagination at-list="ObtenerEventosAll" first-text="Primera" at-config="configListEventos"></at-pagination>
+            </div>
+        </div>
+    </div>

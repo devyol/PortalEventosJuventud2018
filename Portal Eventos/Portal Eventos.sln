@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EVE01.UI", "EVE01.UI\EVE01.UI.csproj", "{A502E441-150C-4F8E-8572-6132C4C6AB48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EVE01.DO", "EVE01.DO\EVE01.DO.csproj", "{0AC95004-461D-4D65-8115-488596FDCA2D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A502E441-150C-4F8E-8572-6132C4C6AB48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A502E441-150C-4F8E-8572-6132C4C6AB48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A502E441-150C-4F8E-8572-6132C4C6AB48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A502E441-150C-4F8E-8572-6132C4C6AB48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AC95004-461D-4D65-8115-488596FDCA2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AC95004-461D-4D65-8115-488596FDCA2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AC95004-461D-4D65-8115-488596FDCA2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AC95004-461D-4D65-8115-488596FDCA2D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

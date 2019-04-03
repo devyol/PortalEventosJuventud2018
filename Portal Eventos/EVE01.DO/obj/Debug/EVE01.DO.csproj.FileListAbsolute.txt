@@ -1,0 +1,22 @@
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01.DO\bin\Debug\EVE01.DO.dll.config
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01.DO\bin\Debug\EVE01.DO.dll
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01.DO\bin\Debug\EVE01.DO.pdb
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01.DO\bin\Debug\EntityFramework.dll
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01.DO\bin\Debug\EntityFramework.xml
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01.DO\obj\Debug\EVE01.DO.dll
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01.DO\obj\Debug\EVE01.DO.pdb
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01.DO\obj\Debug\EVE01.DO.csprojResolveAssemblyReference.cache
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01.DO\bin\Debug\EVE01.DO.dll.config
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01.DO\bin\Debug\EVE01.DO.dll
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01.DO\bin\Debug\EVE01.DO.pdb
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01.DO\bin\Debug\EntityFramework.dll
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01.DO\bin\Debug\EntityFramework.xml
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01.DO\obj\Debug\EVE01.DO.dll
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01.DO\obj\Debug\EVE01.DO.pdb
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01.DO\bin\Debug\EVE01.DO.dll.config
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01.DO\bin\Debug\EVE01.DO.dll
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01.DO\bin\Debug\EVE01.DO.pdb
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01.DO\bin\Debug\EntityFramework.dll
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01.DO\bin\Debug\EntityFramework.xml
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01.DO\obj\Debug\EVE01.DO.dll
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01.DO\obj\Debug\EVE01.DO.pdb

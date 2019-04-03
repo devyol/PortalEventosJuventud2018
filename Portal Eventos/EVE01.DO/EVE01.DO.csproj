@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0AC95004-461D-4D65-8115-488596FDCA2D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EVE01.DO</RootNamespace>
+    <AssemblyName>EVE01.DO</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="DATA\EVE01_AREA_SERVICIO.cs">
+      <DependentUpon>ModeloEvento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\EVE01_CORRELATIVO.cs">
+      <DependentUpon>ModeloEvento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\EVE01_ESTADO.cs">
+      <DependentUpon>ModeloEvento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\EVE01_EVENTO.cs">
+      <DependentUpon>ModeloEvento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\EVE01_EVENTO_ACTUALIZACION.cs">
+      <DependentUpon>ModeloEvento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\EVE01_EVENTO_BUS.cs">
+      <DependentUpon>ModeloEvento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\EVE01_EVENTO_OPCION.cs">
+      <DependentUpon>ModeloEvento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\EVE01_EVENTO_SILLA.cs">
+      <DependentUpon>ModeloEvento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\EVE01_INSCRIPCION.cs">
+      <DependentUpon>ModeloEvento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\EVE01_INSCRIPCION_BUS.cs">
+      <DependentUpon>ModeloEvento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\EVE01_INSCRIPCION_HOSPEDAJE.cs">
+      <DependentUpon>ModeloEvento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\EVE01_INSCRIPCION_OPCION.cs">
+      <DependentUpon>ModeloEvento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\EVE01_INSCRIPCION_SILLA.cs">
+      <DependentUpon>ModeloEvento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\EVE01_MOVIMIENTO.cs">
+      <DependentUpon>ModeloEvento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\EVE01_PARTICIPANTE.cs">
+      <DependentUpon>ModeloEvento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\EVE01_PARTICIPANTE_SALDO.cs">
+      <DependentUpon>ModeloEvento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\EVE01_PARTICIPANTE_SERVICIO.cs">
+      <DependentUpon>ModeloEvento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\EVE01_RECIBO.cs">
+      <DependentUpon>ModeloEvento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\EVE01_RECIBO_DETALLE.cs">
+      <DependentUpon>ModeloEvento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\EVE01_SILLA_ANULADA.cs">
+      <DependentUpon>ModeloEvento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\EVE01_TIPO_MOVIMIENTO.cs">
+      <DependentUpon>ModeloEvento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\EVE01_TIPO_PAGO.cs">
+      <DependentUpon>ModeloEvento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\EVE01_USUARIO.cs">
+      <DependentUpon>ModeloEvento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\ModeloEvento.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloEvento.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\ModeloEvento.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloEvento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DATA\ModeloEvento.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloEvento.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="DATA\ModeloEvento.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModeloEvento.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DATA\ModeloEvento.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModeloEvento.edmx</DependentUpon>
+      <LastGenOutput>ModeloEvento.Context.cs</LastGenOutput>
+    </None>
+    <None Include="DATA\ModeloEvento.edmx.diagram">
+      <DependentUpon>ModeloEvento.edmx</DependentUpon>
+    </None>
+    <None Include="DATA\ModeloEvento.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModeloEvento.edmx</DependentUpon>
+      <LastGenOutput>ModeloEvento.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,853 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModelEvento" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="EntitiesEVE01" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="EVE01_AREA_SERVICIO" EntityType="ModelEvento.EVE01_AREA_SERVICIO" />
+    <EntitySet Name="EVE01_CORRELATIVO" EntityType="ModelEvento.EVE01_CORRELATIVO" />
+    <EntitySet Name="EVE01_ESTADO" EntityType="ModelEvento.EVE01_ESTADO" />
+    <EntitySet Name="EVE01_EVENTO_ACTUALIZACION" EntityType="ModelEvento.EVE01_EVENTO_ACTUALIZACION" />
+    <EntitySet Name="EVE01_INSCRIPCION" EntityType="ModelEvento.EVE01_INSCRIPCION" />
+    <EntitySet Name="EVE01_INSCRIPCION_OPCION" EntityType="ModelEvento.EVE01_INSCRIPCION_OPCION" />
+    <EntitySet Name="EVE01_PARTICIPANTE" EntityType="ModelEvento.EVE01_PARTICIPANTE" />
+    <EntitySet Name="EVE01_PARTICIPANTE_SERVICIO" EntityType="ModelEvento.EVE01_PARTICIPANTE_SERVICIO" />
+    <EntitySet Name="EVE01_USUARIO" EntityType="ModelEvento.EVE01_USUARIO" />
+    <AssociationSet Name="FK_AREA_AREA" Association="ModelEvento.FK_AREA_AREA">
+      <End Role="EVE01_AREA_SERVICIO" EntitySet="EVE01_AREA_SERVICIO" />
+      <End Role="EVE01_PARTICIPANTE_SERVICIO" EntitySet="EVE01_PARTICIPANTE_SERVICIO" />
+    </AssociationSet>
+    <AssociationSet Name="INSC_OP_INSC_FK" Association="ModelEvento.INSC_OP_INSC_FK">
+      <End Role="EVE01_INSCRIPCION" EntitySet="EVE01_INSCRIPCION" />
+      <End Role="EVE01_INSCRIPCION_OPCION" EntitySet="EVE01_INSCRIPCION_OPCION" />
+    </AssociationSet>
+    <AssociationSet Name="INSC_PAR_FK" Association="ModelEvento.INSC_PAR_FK">
+      <End Role="EVE01_PARTICIPANTE" EntitySet="EVE01_PARTICIPANTE" />
+      <End Role="EVE01_INSCRIPCION" EntitySet="EVE01_INSCRIPCION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PART_PART" Association="ModelEvento.FK_PART_PART">
+      <End Role="EVE01_PARTICIPANTE" EntitySet="EVE01_PARTICIPANTE" />
+      <End Role="EVE01_PARTICIPANTE_SERVICIO" EntitySet="EVE01_PARTICIPANTE_SERVICIO" />
+    </AssociationSet>
+    <EntitySet Name="EVE01_EVENTO_OPCION" EntityType="ModelEvento.EVE01_EVENTO_OPCION" />
+    <EntitySet Name="EVE01_PARTICIPANTE_SALDO" EntityType="ModelEvento.EVE01_PARTICIPANTE_SALDO" />
+    <AssociationSet Name="FK_SAL_PA" Association="ModelEvento.FK_SAL_PA">
+      <End Role="EVE01_PARTICIPANTE" EntitySet="EVE01_PARTICIPANTE" />
+      <End Role="EVE01_PARTICIPANTE_SALDO" EntitySet="EVE01_PARTICIPANTE_SALDO" />
+    </AssociationSet>
+    <EntitySet Name="EVE01_INSCRIPCION_BUS" EntityType="ModelEvento.EVE01_INSCRIPCION_BUS" />
+    <EntitySet Name="EVE01_MOVIMIENTO" EntityType="ModelEvento.EVE01_MOVIMIENTO" />
+    <EntitySet Name="EVE01_RECIBO_DETALLE" EntityType="ModelEvento.EVE01_RECIBO_DETALLE" />
+    <EntitySet Name="EVE01_TIPO_MOVIMIENTO" EntityType="ModelEvento.EVE01_TIPO_MOVIMIENTO" />
+    <EntitySet Name="EVE01_TIPO_PAGO" EntityType="ModelEvento.EVE01_TIPO_PAGO" />
+    <AssociationSet Name="FK_REC_DET_EV_OP" Association="ModelEvento.FK_REC_DET_EV_OP">
+      <End Role="EVE01_EVENTO_OPCION" EntitySet="EVE01_EVENTO_OPCION" />
+      <End Role="EVE01_RECIBO_DETALLE" EntitySet="EVE01_RECIBO_DETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INS_BUS_PA" Association="ModelEvento.FK_INS_BUS_PA">
+      <End Role="EVE01_PARTICIPANTE" EntitySet="EVE01_PARTICIPANTE" />
+      <End Role="EVE01_INSCRIPCION_BUS" EntitySet="EVE01_INSCRIPCION_BUS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MOV_PA" Association="ModelEvento.FK_MOV_PA">
+      <End Role="EVE01_PARTICIPANTE" EntitySet="EVE01_PARTICIPANTE" />
+      <End Role="EVE01_MOVIMIENTO" EntitySet="EVE01_MOVIMIENTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MOV_TM" Association="ModelEvento.FK_MOV_TM">
+      <End Role="EVE01_TIPO_MOVIMIENTO" EntitySet="EVE01_TIPO_MOVIMIENTO" />
+      <End Role="EVE01_MOVIMIENTO" EntitySet="EVE01_MOVIMIENTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MOV_TP" Association="ModelEvento.FK_MOV_TP">
+      <End Role="EVE01_TIPO_PAGO" EntitySet="EVE01_TIPO_PAGO" />
+      <End Role="EVE01_MOVIMIENTO" EntitySet="EVE01_MOVIMIENTO" />
+    </AssociationSet>
+    <EntitySet Name="EVE01_EVENTO_BUS" EntityType="ModelEvento.EVE01_EVENTO_BUS" />
+    <AssociationSet Name="FK_INS_BUS_BUS" Association="ModelEvento.FK_INS_BUS_BUS">
+      <End Role="EVE01_EVENTO_BUS" EntitySet="EVE01_EVENTO_BUS" />
+      <End Role="EVE01_INSCRIPCION_BUS" EntitySet="EVE01_INSCRIPCION_BUS" />
+    </AssociationSet>
+    <EntitySet Name="EVE01_EVENTO" EntityType="ModelEvento.EVE01_EVENTO" />
+    <AssociationSet Name="FK_EV_BUS_EV" Association="ModelEvento.FK_EV_BUS_EV">
+      <End Role="EVE01_EVENTO" EntitySet="EVE01_EVENTO" />
+      <End Role="EVE01_EVENTO_BUS" EntitySet="EVE01_EVENTO_BUS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INS_BUS_EV" Association="ModelEvento.FK_INS_BUS_EV">
+      <End Role="EVE01_EVENTO" EntitySet="EVE01_EVENTO" />
+      <End Role="EVE01_INSCRIPCION_BUS" EntitySet="EVE01_INSCRIPCION_BUS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MOV_EV" Association="ModelEvento.FK_MOV_EV">
+      <End Role="EVE01_EVENTO" EntitySet="EVE01_EVENTO" />
+      <End Role="EVE01_MOVIMIENTO" EntitySet="EVE01_MOVIMIENTO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SAL_EV" Association="ModelEvento.FK_SAL_EV">
+      <End Role="EVE01_EVENTO" EntitySet="EVE01_EVENTO" />
+      <End Role="EVE01_PARTICIPANTE_SALDO" EntitySet="EVE01_PARTICIPANTE_SALDO" />
+    </AssociationSet>
+    <AssociationSet Name="INSC_EV_FK" Association="ModelEvento.INSC_EV_FK">
+      <End Role="EVE01_EVENTO" EntitySet="EVE01_EVENTO" />
+      <End Role="EVE01_INSCRIPCION" EntitySet="EVE01_INSCRIPCION" />
+    </AssociationSet>
+    <AssociationSet Name="REF_EV_FK" Association="ModelEvento.REF_EV_FK">
+      <End Role="EVE01_EVENTO" EntitySet="EVE01_EVENTO" />
+      <End Role="EVE01_EVENTO_OPCION" EntitySet="EVE01_EVENTO_OPCION" />
+    </AssociationSet>
+    <EntitySet Name="EVE01_EVENTO_SILLA" EntityType="ModelEvento.EVE01_EVENTO_SILLA" />
+    <AssociationSet Name="FK_EVSILLA" Association="ModelEvento.FK_EVSILLA">
+      <End Role="EVE01_EVENTO" EntitySet="EVE01_EVENTO" />
+      <End Role="EVE01_EVENTO_SILLA" EntitySet="EVE01_EVENTO_SILLA" />
+    </AssociationSet>
+    <EntitySet Name="EVE01_INSCRIPCION_SILLA" EntityType="ModelEvento.EVE01_INSCRIPCION_SILLA" />
+    <AssociationSet Name="FK_EVESILLA" Association="ModelEvento.FK_EVESILLA">
+      <End Role="EVE01_EVENTO" EntitySet="EVE01_EVENTO" />
+      <End Role="EVE01_INSCRIPCION_SILLA" EntitySet="EVE01_INSCRIPCION_SILLA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PARSILLA" Association="ModelEvento.FK_PARSILLA">
+      <End Role="EVE01_PARTICIPANTE" EntitySet="EVE01_PARTICIPANTE" />
+      <End Role="EVE01_INSCRIPCION_SILLA" EntitySet="EVE01_INSCRIPCION_SILLA" />
+    </AssociationSet>
+    <EntitySet Name="EVE01_RECIBO" EntityType="ModelEvento.EVE01_RECIBO" />
+    <AssociationSet Name="FK_REC_EV" Association="ModelEvento.FK_REC_EV">
+      <End Role="EVE01_EVENTO" EntitySet="EVE01_EVENTO" />
+      <End Role="EVE01_RECIBO" EntitySet="EVE01_RECIBO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_REC_mov" Association="ModelEvento.FK_REC_mov">
+      <End Role="EVE01_MOVIMIENTO" EntitySet="EVE01_MOVIMIENTO" />
+      <End Role="EVE01_RECIBO" EntitySet="EVE01_RECIBO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_REC_PA" Association="ModelEvento.FK_REC_PA">
+      <End Role="EVE01_PARTICIPANTE" EntitySet="EVE01_PARTICIPANTE" />
+      <End Role="EVE01_RECIBO" EntitySet="EVE01_RECIBO" />
+    </AssociationSet>
+    <EntitySet Name="EVE01_INSCRIPCION_HOSPEDAJE" EntityType="ModelEvento.EVE01_INSCRIPCION_HOSPEDAJE" />
+    <AssociationSet Name="hosp_EV_FK" Association="ModelEvento.hosp_EV_FK">
+      <End Role="EVE01_EVENTO" EntitySet="EVE01_EVENTO" />
+      <End Role="EVE01_INSCRIPCION_HOSPEDAJE" EntitySet="EVE01_INSCRIPCION_HOSPEDAJE" />
+    </AssociationSet>
+    <AssociationSet Name="hosp_PAR_FK" Association="ModelEvento.hosp_PAR_FK">
+      <End Role="EVE01_PARTICIPANTE" EntitySet="EVE01_PARTICIPANTE" />
+      <End Role="EVE01_INSCRIPCION_HOSPEDAJE" EntitySet="EVE01_INSCRIPCION_HOSPEDAJE" />
+    </AssociationSet>
+    <EntitySet Name="EVE01_SILLA_ANULADA" EntityType="ModelEvento.EVE01_SILLA_ANULADA" />
+    <AssociationSet Name="FK_anu_eve" Association="ModelEvento.FK_anu_eve">
+      <End Role="EVE01_EVENTO" EntitySet="EVE01_EVENTO" />
+      <End Role="EVE01_SILLA_ANULADA" EntitySet="EVE01_SILLA_ANULADA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_anu_par" Association="ModelEvento.FK_anu_par">
+      <End Role="EVE01_PARTICIPANTE" EntitySet="EVE01_PARTICIPANTE" />
+      <End Role="EVE01_SILLA_ANULADA" EntitySet="EVE01_SILLA_ANULADA" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="EVE01_AREA_SERVICIO">
+    <Key>
+      <PropertyRef Name="AREA" />
+    </Key>
+    <Property Name="AREA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NOMBRE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ESTADO_REGISTRO" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="USUARIO_CREACION" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="FECHA_CREACION" Type="DateTime" Precision="0" />
+    <Property Name="USUARIO_MODIFICACION" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="FECHA_MODIFICACION" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="EVE01_PARTICIPANTE_SERVICIO" Relationship="ModelEvento.FK_AREA_AREA" FromRole="EVE01_AREA_SERVICIO" ToRole="EVE01_PARTICIPANTE_SERVICIO" />
+  </EntityType>
+  <EntityType Name="EVE01_CORRELATIVO">
+    <Key>
+      <PropertyRef Name="CORRELATIVO" />
+    </Key>
+    <Property Name="CORRELATIVO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="CORRELATIVO_DISPONIBLE" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="ESTADO_REGISTRO" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="USUARIO_CREACION" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FECHA_CREACION" Type="DateTime" Precision="0" />
+    <Property Name="USUARIO_MODIFICACION" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FECHA_MODIFICACION" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="EVE01_ESTADO">
+    <Key>
+      <PropertyRef Name="ESTADO" />
+    </Key>
+    <Property Name="ESTADO" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="USUARIO_CREACION" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="FECHA_CREACION" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="EVE01_EVENTO_ACTUALIZACION">
+    <Key>
+      <PropertyRef Name="EVENTO" />
+      <PropertyRef Name="PARTICIPANTE" />
+    </Key>
+    <Property Name="EVENTO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="PARTICIPANTE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ESTADO_REGISTO" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="USUARIO_CREACION" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="FECHA_CREACION" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="EVE01_INSCRIPCION">
+    <Key>
+      <PropertyRef Name="EVENTO" />
+      <PropertyRef Name="PARTICIPANTE" />
+    </Key>
+    <Property Name="EVENTO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="PARTICIPANTE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="FECHA_INSCRIPCION" Type="DateTime" Precision="0" />
+    <Property Name="ESTADO_REGISTRO" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="USUARIO_CREACION" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="FECHA_CREACION" Type="DateTime" Precision="0" />
+    <Property Name="USUARIO_MODIFICACION" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="FECHA_MODIFICACION" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="EVE01_INSCRIPCION_OPCION" Relationship="ModelEvento.INSC_OP_INSC_FK" FromRole="EVE01_INSCRIPCION" ToRole="EVE01_INSCRIPCION_OPCION" />
+    <NavigationProperty Name="EVE01_PARTICIPANTE" Relationship="ModelEvento.INSC_PAR_FK" FromRole="EVE01_INSCRIPCION" ToRole="EVE01_PARTICIPANTE" />
+    <NavigationProperty Name="EVE01_EVENTO" Relationship="ModelEvento.INSC_EV_FK" FromRole="EVE01_INSCRIPCION" ToRole="EVE01_EVENTO" />
+  </EntityType>
+  <EntityType Name="EVE01_INSCRIPCION_OPCION">
+    <Key>
+      <PropertyRef Name="PARTICIPANTE" />
+      <PropertyRef Name="EVENTO" />
+      <PropertyRef Name="OPCION" />
+    </Key>
+    <Property Name="PARTICIPANTE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="EVENTO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="OPCION" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ESTADO_REGISTRO" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="USUARIO_CREACION" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="FECHA_CREACION" Type="DateTime" Precision="0" />
+    <Property Name="USUARIO_MODIFICACION" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="FECHA_MODIFICACION" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="EVE01_INSCRIPCION" Relationship="ModelEvento.INSC_OP_INSC_FK" FromRole="EVE01_INSCRIPCION_OPCION" ToRole="EVE01_INSCRIPCION" />
+  </EntityType>
+  <EntityType Name="EVE01_PARTICIPANTE">
+    <Key>
+      <PropertyRef Name="PARTICIPANTE" />
+    </Key>
+    <Property Name="PARTICIPANTE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NOMBRE" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="APELLIDO" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="DIRECCION" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="TELEFONO" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="CORREO" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="TALLA" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="GENERO" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="FECHA_NACIMIENTO" Type="DateTime" Precision="0" />
+    <Property Name="ALERJICO" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="OBSERVACIONES" Type="String" MaxLength="2500" Unicode="false" FixedLength="false" />
+    <Property Name="ESTADO_REGISTRO" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="USUARIO_CREACION" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="FECHA_CREACION" Type="DateTime" Precision="0" />
+    <Property Name="USUARIO_MODIFICACION" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="FECHA_MODIFICACION" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="EVE01_INSCRIPCION" Relationship="ModelEvento.INSC_PAR_FK" FromRole="EVE01_PARTICIPANTE" ToRole="EVE01_INSCRIPCION" />
+    <NavigationProperty Name="EVE01_PARTICIPANTE_SERVICIO" Relationship="ModelEvento.FK_PART_PART" FromRole="EVE01_PARTICIPANTE" ToRole="EVE01_PARTICIPANTE_SERVICIO" />
+    <NavigationProperty Name="EVE01_PARTICIPANTE_SALDO" Relationship="ModelEvento.FK_SAL_PA" FromRole="EVE01_PARTICIPANTE" ToRole="EVE01_PARTICIPANTE_SALDO" />
+    <NavigationProperty Name="EVE01_INSCRIPCION_BUS" Relationship="ModelEvento.FK_INS_BUS_PA" FromRole="EVE01_PARTICIPANTE" ToRole="EVE01_INSCRIPCION_BUS" />
+    <NavigationProperty Name="EVE01_MOVIMIENTO" Relationship="ModelEvento.FK_MOV_PA" FromRole="EVE01_PARTICIPANTE" ToRole="EVE01_MOVIMIENTO" />
+    <NavigationProperty Name="EVE01_INSCRIPCION_SILLA" Relationship="ModelEvento.FK_PARSILLA" FromRole="EVE01_PARTICIPANTE" ToRole="EVE01_INSCRIPCION_SILLA" />
+    <NavigationProperty Name="EVE01_RECIBO" Relationship="ModelEvento.FK_REC_PA" FromRole="EVE01_PARTICIPANTE" ToRole="EVE01_RECIBO" />
+    <NavigationProperty Name="EVE01_INSCRIPCION_HOSPEDAJE" Relationship="ModelEvento.hosp_PAR_FK" FromRole="EVE01_PARTICIPANTE" ToRole="EVE01_INSCRIPCION_HOSPEDAJE" />
+    <NavigationProperty Name="EVE01_SILLA_ANULADA" Relationship="ModelEvento.FK_anu_par" FromRole="EVE01_PARTICIPANTE" ToRole="EVE01_SILLA_ANULADA" />
+  </EntityType>
+  <EntityType Name="EVE01_PARTICIPANTE_SERVICIO">
+    <Key>
+      <PropertyRef Name="PARTICIPANTE" />
+      <PropertyRef Name="AREA_SERVICIO" />
+    </Key>
+    <Property Name="PARTICIPANTE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="AREA_SERVICIO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="ESTADO_REGISTRO" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="USUARIO_CREACION" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="FECHA_CREACION" Type="DateTime" Precision="0" />
+    <Property Name="USUARIO_MODIFICACION" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="FECHA_MODIFICACION" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="EVE01_AREA_SERVICIO" Relationship="ModelEvento.FK_AREA_AREA" FromRole="EVE01_PARTICIPANTE_SERVICIO" ToRole="EVE01_AREA_SERVICIO" />
+    <NavigationProperty Name="EVE01_PARTICIPANTE" Relationship="ModelEvento.FK_PART_PART" FromRole="EVE01_PARTICIPANTE_SERVICIO" ToRole="EVE01_PARTICIPANTE" />
+  </EntityType>
+  <EntityType Name="EVE01_USUARIO">
+    <Key>
+      <PropertyRef Name="USUARIO" />
+    </Key>
+    <Property Name="USUARIO" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="PASSWORD" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="ESTADO_REGISTRO" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="USUARIO_CREACION" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="FECHA_CREACION" Type="DateTime" Precision="0" />
+    <Property Name="USUARIO_MODIFICACION" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="FECHA_MODIFICACION" Type="DateTime" Precision="0" />
+  </EntityType>
+  <Association Name="FK_AREA_AREA">
+    <End Role="EVE01_AREA_SERVICIO" Type="ModelEvento.EVE01_AREA_SERVICIO" Multiplicity="1" />
+    <End Role="EVE01_PARTICIPANTE_SERVICIO" Type="ModelEvento.EVE01_PARTICIPANTE_SERVICIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_AREA_SERVICIO">
+        <PropertyRef Name="AREA" />
+      </Principal>
+      <Dependent Role="EVE01_PARTICIPANTE_SERVICIO">
+        <PropertyRef Name="AREA_SERVICIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="INSC_OP_INSC_FK">
+    <End Role="EVE01_INSCRIPCION" Type="ModelEvento.EVE01_INSCRIPCION" Multiplicity="1" />
+    <End Role="EVE01_INSCRIPCION_OPCION" Type="ModelEvento.EVE01_INSCRIPCION_OPCION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_INSCRIPCION">
+        <PropertyRef Name="EVENTO" />
+        <PropertyRef Name="PARTICIPANTE" />
+      </Principal>
+      <Dependent Role="EVE01_INSCRIPCION_OPCION">
+        <PropertyRef Name="EVENTO" />
+        <PropertyRef Name="PARTICIPANTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="INSC_PAR_FK">
+    <End Role="EVE01_PARTICIPANTE" Type="ModelEvento.EVE01_PARTICIPANTE" Multiplicity="1" />
+    <End Role="EVE01_INSCRIPCION" Type="ModelEvento.EVE01_INSCRIPCION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_PARTICIPANTE">
+        <PropertyRef Name="PARTICIPANTE" />
+      </Principal>
+      <Dependent Role="EVE01_INSCRIPCION">
+        <PropertyRef Name="PARTICIPANTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PART_PART">
+    <End Role="EVE01_PARTICIPANTE" Type="ModelEvento.EVE01_PARTICIPANTE" Multiplicity="1" />
+    <End Role="EVE01_PARTICIPANTE_SERVICIO" Type="ModelEvento.EVE01_PARTICIPANTE_SERVICIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_PARTICIPANTE">
+        <PropertyRef Name="PARTICIPANTE" />
+      </Principal>
+      <Dependent Role="EVE01_PARTICIPANTE_SERVICIO">
+        <PropertyRef Name="PARTICIPANTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="EVE01_EVENTO_OPCION">
+    <Key>
+      <PropertyRef Name="OPCION" />
+    </Key>
+    <Property Type="Decimal" Name="OPCION" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="EVENTO" Precision="38" Scale="0" />
+    <Property Type="String" Name="DESCRIPCION" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="PRECIO" Precision="38" Scale="0" />
+    <Property Type="String" Name="OBLIGATORIO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="ES_TRANSPORTE" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="ES_HOSPEDAJE" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="ESTADO_REGISTRO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="USUARIO_CREACION" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA_CREACION" Precision="0" />
+    <Property Type="String" Name="USUARIO_MODIFICACION" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA_MODIFICACION" Precision="0" />
+    <NavigationProperty Name="EVE01_RECIBO_DETALLE" Relationship="ModelEvento.FK_REC_DET_EV_OP" FromRole="EVE01_EVENTO_OPCION" ToRole="EVE01_RECIBO_DETALLE" />
+    <NavigationProperty Name="EVE01_EVENTO" Relationship="ModelEvento.REF_EV_FK" FromRole="EVE01_EVENTO_OPCION" ToRole="EVE01_EVENTO" />
+  </EntityType>
+  <EntityType Name="EVE01_PARTICIPANTE_SALDO">
+    <Key>
+      <PropertyRef Name="EVENTO" />
+      <PropertyRef Name="PARTICIPANTE" />
+    </Key>
+    <Property Type="Decimal" Name="EVENTO" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="PARTICIPANTE" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="TOTAL" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="SALDO_ABONADO" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="SALDO_PENDIENTE" Precision="38" Scale="0" />
+    <Property Type="String" Name="ESTADO_REGISTRO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="USUARIO_CREACION" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA_CREACION" Precision="0" />
+    <Property Type="String" Name="USUARIO_MODIFICACION" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA_MODIFICACION" Precision="0" />
+    <NavigationProperty Name="EVE01_PARTICIPANTE" Relationship="ModelEvento.FK_SAL_PA" FromRole="EVE01_PARTICIPANTE_SALDO" ToRole="EVE01_PARTICIPANTE" />
+    <NavigationProperty Name="EVE01_EVENTO" Relationship="ModelEvento.FK_SAL_EV" FromRole="EVE01_PARTICIPANTE_SALDO" ToRole="EVE01_EVENTO" />
+  </EntityType>
+  <Association Name="FK_SAL_PA">
+    <End Type="ModelEvento.EVE01_PARTICIPANTE" Role="EVE01_PARTICIPANTE" Multiplicity="1" />
+    <End Type="ModelEvento.EVE01_PARTICIPANTE_SALDO" Role="EVE01_PARTICIPANTE_SALDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_PARTICIPANTE">
+        <PropertyRef Name="PARTICIPANTE" />
+      </Principal>
+      <Dependent Role="EVE01_PARTICIPANTE_SALDO">
+        <PropertyRef Name="PARTICIPANTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="EVE01_INSCRIPCION_BUS">
+    <Key>
+      <PropertyRef Name="BUS" />
+      <PropertyRef Name="PARTICIPANTE" />
+      <PropertyRef Name="EVENTO" />
+    </Key>
+    <Property Type="Decimal" Name="BUS" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="PARTICIPANTE" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="EVENTO" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="NO_BUS" Precision="38" Scale="0" />
+    <Property Type="String" Name="ESTADO_REGISTRO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="USUARIO_CREACION" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA_CREACION" Precision="0" />
+    <Property Type="String" Name="USUARIO_MODIFICACION" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA_MODIFICACION" Precision="0" />
+    <NavigationProperty Name="EVE01_PARTICIPANTE" Relationship="ModelEvento.FK_INS_BUS_PA" FromRole="EVE01_INSCRIPCION_BUS" ToRole="EVE01_PARTICIPANTE" />
+    <NavigationProperty Name="EVE01_EVENTO_BUS" Relationship="ModelEvento.FK_INS_BUS_BUS" FromRole="EVE01_INSCRIPCION_BUS" ToRole="EVE01_EVENTO_BUS" />
+    <NavigationProperty Name="EVE01_EVENTO" Relationship="ModelEvento.FK_INS_BUS_EV" FromRole="EVE01_INSCRIPCION_BUS" ToRole="EVE01_EVENTO" />
+  </EntityType>
+  <EntityType Name="EVE01_MOVIMIENTO">
+    <Key>
+      <PropertyRef Name="MOVIMIENTO" />
+    </Key>
+    <Property Type="Decimal" Name="MOVIMIENTO" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="PARTICIPANTE" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="EVENTO" Precision="38" Scale="0" />
+    <Property Type="String" Name="TIPO_MOVIMIENTO" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="TIPO_PAGO" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="CANTIDAD" Precision="38" Scale="0" />
+    <Property Type="String" Name="ESTADO_REGISTRO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="USUARIO_CREACION" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA_CREACION" Precision="0" />
+    <Property Type="String" Name="USUARIO_MODIFICACION" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA_MODIFICACION" Precision="0" />
+    <NavigationProperty Name="EVE01_PARTICIPANTE" Relationship="ModelEvento.FK_MOV_PA" FromRole="EVE01_MOVIMIENTO" ToRole="EVE01_PARTICIPANTE" />
+    <NavigationProperty Name="EVE01_TIPO_MOVIMIENTO" Relationship="ModelEvento.FK_MOV_TM" FromRole="EVE01_MOVIMIENTO" ToRole="EVE01_TIPO_MOVIMIENTO" />
+    <NavigationProperty Name="EVE01_TIPO_PAGO" Relationship="ModelEvento.FK_MOV_TP" FromRole="EVE01_MOVIMIENTO" ToRole="EVE01_TIPO_PAGO" />
+    <NavigationProperty Name="EVE01_EVENTO" Relationship="ModelEvento.FK_MOV_EV" FromRole="EVE01_MOVIMIENTO" ToRole="EVE01_EVENTO" />
+    <NavigationProperty Name="EVE01_RECIBO" Relationship="ModelEvento.FK_REC_mov" FromRole="EVE01_MOVIMIENTO" ToRole="EVE01_RECIBO" />
+  </EntityType>
+  <EntityType Name="EVE01_RECIBO_DETALLE">
+    <Key>
+      <PropertyRef Name="RECIBO" />
+      <PropertyRef Name="OPCION" />
+    </Key>
+    <Property Type="Decimal" Name="RECIBO" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="OPCION" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="String" Name="DESCRIPCION" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="PRECIO" Precision="38" Scale="0" />
+    <Property Type="String" Name="ESTADO_REGISTRO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="USUARIO_CREACION" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA_CREACION" Precision="0" />
+    <Property Type="String" Name="USUARIO_MODIFICACION" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA_MODIFICACION" Precision="0" />
+    <NavigationProperty Name="EVE01_EVENTO_OPCION" Relationship="ModelEvento.FK_REC_DET_EV_OP" FromRole="EVE01_RECIBO_DETALLE" ToRole="EVE01_EVENTO_OPCION" />
+  </EntityType>
+  <EntityType Name="EVE01_TIPO_MOVIMIENTO">
+    <Key>
+      <PropertyRef Name="TIPO_MOVIMIENTO" />
+    </Key>
+    <Property Type="String" Name="TIPO_MOVIMIENTO" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DESCRIPCION" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ESTADO_REGISTRO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="USUARIO_CREACION" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA_CREACION" Precision="0" />
+    <Property Type="String" Name="USUARIO_MODIFICACION" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA_MODIFICACION" Precision="0" />
+    <NavigationProperty Name="EVE01_MOVIMIENTO" Relationship="ModelEvento.FK_MOV_TM" FromRole="EVE01_TIPO_MOVIMIENTO" ToRole="EVE01_MOVIMIENTO" />
+  </EntityType>
+  <EntityType Name="EVE01_TIPO_PAGO">
+    <Key>
+      <PropertyRef Name="TIPO_PAGO" />
+    </Key>
+    <Property Type="Decimal" Name="TIPO_PAGO" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="String" Name="DESCRIPCION" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ESTADO_REGISTRO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="USUARIO_CREACION" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA_CREACION" Precision="0" />
+    <Property Type="String" Name="USUARIO_MODIFICACION" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA_MODIFICACION" Precision="0" />
+    <NavigationProperty Name="EVE01_MOVIMIENTO" Relationship="ModelEvento.FK_MOV_TP" FromRole="EVE01_TIPO_PAGO" ToRole="EVE01_MOVIMIENTO" />
+  </EntityType>
+  <Association Name="FK_REC_DET_EV_OP">
+    <End Type="ModelEvento.EVE01_EVENTO_OPCION" Role="EVE01_EVENTO_OPCION" Multiplicity="1" />
+    <End Type="ModelEvento.EVE01_RECIBO_DETALLE" Role="EVE01_RECIBO_DETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_EVENTO_OPCION">
+        <PropertyRef Name="OPCION" />
+      </Principal>
+      <Dependent Role="EVE01_RECIBO_DETALLE">
+        <PropertyRef Name="OPCION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INS_BUS_PA">
+    <End Type="ModelEvento.EVE01_PARTICIPANTE" Role="EVE01_PARTICIPANTE" Multiplicity="1" />
+    <End Type="ModelEvento.EVE01_INSCRIPCION_BUS" Role="EVE01_INSCRIPCION_BUS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_PARTICIPANTE">
+        <PropertyRef Name="PARTICIPANTE" />
+      </Principal>
+      <Dependent Role="EVE01_INSCRIPCION_BUS">
+        <PropertyRef Name="PARTICIPANTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MOV_PA">
+    <End Type="ModelEvento.EVE01_PARTICIPANTE" Role="EVE01_PARTICIPANTE" Multiplicity="0..1" />
+    <End Type="ModelEvento.EVE01_MOVIMIENTO" Role="EVE01_MOVIMIENTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_PARTICIPANTE">
+        <PropertyRef Name="PARTICIPANTE" />
+      </Principal>
+      <Dependent Role="EVE01_MOVIMIENTO">
+        <PropertyRef Name="PARTICIPANTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MOV_TM">
+    <End Type="ModelEvento.EVE01_TIPO_MOVIMIENTO" Role="EVE01_TIPO_MOVIMIENTO" Multiplicity="0..1" />
+    <End Type="ModelEvento.EVE01_MOVIMIENTO" Role="EVE01_MOVIMIENTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_TIPO_MOVIMIENTO">
+        <PropertyRef Name="TIPO_MOVIMIENTO" />
+      </Principal>
+      <Dependent Role="EVE01_MOVIMIENTO">
+        <PropertyRef Name="TIPO_MOVIMIENTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MOV_TP">
+    <End Type="ModelEvento.EVE01_TIPO_PAGO" Role="EVE01_TIPO_PAGO" Multiplicity="0..1" />
+    <End Type="ModelEvento.EVE01_MOVIMIENTO" Role="EVE01_MOVIMIENTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_TIPO_PAGO">
+        <PropertyRef Name="TIPO_PAGO" />
+      </Principal>
+      <Dependent Role="EVE01_MOVIMIENTO">
+        <PropertyRef Name="TIPO_PAGO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="EVE01_EVENTO_BUS">
+    <Key>
+      <PropertyRef Name="BUS" />
+    </Key>
+    <Property Type="Decimal" Name="BUS" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="EVENTO" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="NO_BUS" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="CAPACIDAD" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="DISPONIBLE" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="OCUPADO" Precision="38" Scale="0" />
+    <Property Type="String" Name="HORA_SALIDA" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ESTADO_REGISTRO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="USUARIO_CREACION" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA_CREACION" Precision="0" />
+    <Property Type="String" Name="USUARIO_MODIFICACION" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA_MODIFICACION" Precision="0" />
+    <Property Type="DateTime" Name="FECHA_LIMITE_ANULACION" Precision="0" />
+    <NavigationProperty Name="EVE01_INSCRIPCION_BUS" Relationship="ModelEvento.FK_INS_BUS_BUS" FromRole="EVE01_EVENTO_BUS" ToRole="EVE01_INSCRIPCION_BUS" />
+    <NavigationProperty Name="EVE01_EVENTO" Relationship="ModelEvento.FK_EV_BUS_EV" FromRole="EVE01_EVENTO_BUS" ToRole="EVE01_EVENTO" />
+  </EntityType>
+  <Association Name="FK_INS_BUS_BUS">
+    <End Type="ModelEvento.EVE01_EVENTO_BUS" Role="EVE01_EVENTO_BUS" Multiplicity="1" />
+    <End Type="ModelEvento.EVE01_INSCRIPCION_BUS" Role="EVE01_INSCRIPCION_BUS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_EVENTO_BUS">
+        <PropertyRef Name="BUS" />
+      </Principal>
+      <Dependent Role="EVE01_INSCRIPCION_BUS">
+        <PropertyRef Name="BUS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="EVE01_EVENTO">
+    <Key>
+      <PropertyRef Name="EVENTO" />
+    </Key>
+    <Property Type="Decimal" Name="EVENTO" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="String" Name="NOMBRE_EVENTO" Nullable="false" MaxLength="350" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FECHA_INICIO" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FECHA_FIN" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="APLICA_BUS" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="ESTADO_REGISTRO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="USUARIO_CREACION" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA_CREACION" Precision="0" />
+    <Property Type="String" Name="USUARIO_MODIFICACION" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA_MODIFICACION" Precision="0" />
+    <Property Type="String" Name="APLICA_SILLA" MaxLength="1" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="EVE01_EVENTO_BUS" Relationship="ModelEvento.FK_EV_BUS_EV" FromRole="EVE01_EVENTO" ToRole="EVE01_EVENTO_BUS" />
+    <NavigationProperty Name="EVE01_INSCRIPCION_BUS" Relationship="ModelEvento.FK_INS_BUS_EV" FromRole="EVE01_EVENTO" ToRole="EVE01_INSCRIPCION_BUS" />
+    <NavigationProperty Name="EVE01_MOVIMIENTO" Relationship="ModelEvento.FK_MOV_EV" FromRole="EVE01_EVENTO" ToRole="EVE01_MOVIMIENTO" />
+    <NavigationProperty Name="EVE01_PARTICIPANTE_SALDO" Relationship="ModelEvento.FK_SAL_EV" FromRole="EVE01_EVENTO" ToRole="EVE01_PARTICIPANTE_SALDO" />
+    <NavigationProperty Name="EVE01_INSCRIPCION" Relationship="ModelEvento.INSC_EV_FK" FromRole="EVE01_EVENTO" ToRole="EVE01_INSCRIPCION" />
+    <NavigationProperty Name="EVE01_EVENTO_OPCION" Relationship="ModelEvento.REF_EV_FK" FromRole="EVE01_EVENTO" ToRole="EVE01_EVENTO_OPCION" />
+    <NavigationProperty Name="EVE01_EVENTO_SILLA" Relationship="ModelEvento.FK_EVSILLA" FromRole="EVE01_EVENTO" ToRole="EVE01_EVENTO_SILLA" />
+    <NavigationProperty Name="EVE01_INSCRIPCION_SILLA" Relationship="ModelEvento.FK_EVESILLA" FromRole="EVE01_EVENTO" ToRole="EVE01_INSCRIPCION_SILLA" />
+    <NavigationProperty Name="EVE01_RECIBO" Relationship="ModelEvento.FK_REC_EV" FromRole="EVE01_EVENTO" ToRole="EVE01_RECIBO" />
+    <NavigationProperty Name="EVE01_INSCRIPCION_HOSPEDAJE" Relationship="ModelEvento.hosp_EV_FK" FromRole="EVE01_EVENTO" ToRole="EVE01_INSCRIPCION_HOSPEDAJE" />
+    <NavigationProperty Name="EVE01_SILLA_ANULADA" Relationship="ModelEvento.FK_anu_eve" FromRole="EVE01_EVENTO" ToRole="EVE01_SILLA_ANULADA" />
+  </EntityType>
+  <Association Name="FK_EV_BUS_EV">
+    <End Type="ModelEvento.EVE01_EVENTO" Role="EVE01_EVENTO" Multiplicity="0..1" />
+    <End Type="ModelEvento.EVE01_EVENTO_BUS" Role="EVE01_EVENTO_BUS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_EVENTO">
+        <PropertyRef Name="EVENTO" />
+      </Principal>
+      <Dependent Role="EVE01_EVENTO_BUS">
+        <PropertyRef Name="EVENTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INS_BUS_EV">
+    <End Type="ModelEvento.EVE01_EVENTO" Role="EVE01_EVENTO" Multiplicity="1" />
+    <End Type="ModelEvento.EVE01_INSCRIPCION_BUS" Role="EVE01_INSCRIPCION_BUS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_EVENTO">
+        <PropertyRef Name="EVENTO" />
+      </Principal>
+      <Dependent Role="EVE01_INSCRIPCION_BUS">
+        <PropertyRef Name="EVENTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MOV_EV">
+    <End Type="ModelEvento.EVE01_EVENTO" Role="EVE01_EVENTO" Multiplicity="0..1" />
+    <End Type="ModelEvento.EVE01_MOVIMIENTO" Role="EVE01_MOVIMIENTO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_EVENTO">
+        <PropertyRef Name="EVENTO" />
+      </Principal>
+      <Dependent Role="EVE01_MOVIMIENTO">
+        <PropertyRef Name="EVENTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SAL_EV">
+    <End Type="ModelEvento.EVE01_EVENTO" Role="EVE01_EVENTO" Multiplicity="1" />
+    <End Type="ModelEvento.EVE01_PARTICIPANTE_SALDO" Role="EVE01_PARTICIPANTE_SALDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_EVENTO">
+        <PropertyRef Name="EVENTO" />
+      </Principal>
+      <Dependent Role="EVE01_PARTICIPANTE_SALDO">
+        <PropertyRef Name="EVENTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="INSC_EV_FK">
+    <End Type="ModelEvento.EVE01_EVENTO" Role="EVE01_EVENTO" Multiplicity="1" />
+    <End Type="ModelEvento.EVE01_INSCRIPCION" Role="EVE01_INSCRIPCION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_EVENTO">
+        <PropertyRef Name="EVENTO" />
+      </Principal>
+      <Dependent Role="EVE01_INSCRIPCION">
+        <PropertyRef Name="EVENTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="REF_EV_FK">
+    <End Type="ModelEvento.EVE01_EVENTO" Role="EVE01_EVENTO" Multiplicity="0..1" />
+    <End Type="ModelEvento.EVE01_EVENTO_OPCION" Role="EVE01_EVENTO_OPCION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_EVENTO">
+        <PropertyRef Name="EVENTO" />
+      </Principal>
+      <Dependent Role="EVE01_EVENTO_OPCION">
+        <PropertyRef Name="EVENTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="EVE01_EVENTO_SILLA">
+    <Key>
+      <PropertyRef Name="SILLA" />
+    </Key>
+    <Property Type="Decimal" Name="SILLA" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="EVENTO" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="SALDO_MINIMO" Precision="38" Scale="0" />
+    <Property Type="String" Name="ESTADO_REGISTRO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="USUARIO_CREACION" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA_CREACION" Precision="0" />
+    <Property Type="String" Name="USUARIO_MODIFICACION" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA_MODIFICACION" Precision="0" />
+    <NavigationProperty Name="EVE01_EVENTO" Relationship="ModelEvento.FK_EVSILLA" FromRole="EVE01_EVENTO_SILLA" ToRole="EVE01_EVENTO" />
+  </EntityType>
+  <Association Name="FK_EVSILLA">
+    <End Type="ModelEvento.EVE01_EVENTO" Role="EVE01_EVENTO" Multiplicity="0..1" />
+    <End Type="ModelEvento.EVE01_EVENTO_SILLA" Role="EVE01_EVENTO_SILLA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_EVENTO">
+        <PropertyRef Name="EVENTO" />
+      </Principal>
+      <Dependent Role="EVE01_EVENTO_SILLA">
+        <PropertyRef Name="EVENTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="EVE01_INSCRIPCION_SILLA">
+    <Key>
+      <PropertyRef Name="EVENTO" />
+      <PropertyRef Name="PARTICIPANTE" />
+    </Key>
+    <Property Type="Decimal" Name="EVENTO" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="PARTICIPANTE" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="NO_SILLA" Precision="38" Scale="0" />
+    <Property Type="String" Name="ESTADO_REGISTRO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="USUARIO_CREACION" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA_CREACION" Precision="0" />
+    <Property Type="String" Name="USUARIO_MODIFICACION" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA_MODIFICACION" Precision="0" />
+    <NavigationProperty Name="EVE01_EVENTO" Relationship="ModelEvento.FK_EVESILLA" FromRole="EVE01_INSCRIPCION_SILLA" ToRole="EVE01_EVENTO" />
+    <NavigationProperty Name="EVE01_PARTICIPANTE" Relationship="ModelEvento.FK_PARSILLA" FromRole="EVE01_INSCRIPCION_SILLA" ToRole="EVE01_PARTICIPANTE" />
+  </EntityType>
+  <Association Name="FK_EVESILLA">
+    <End Type="ModelEvento.EVE01_EVENTO" Role="EVE01_EVENTO" Multiplicity="1" />
+    <End Type="ModelEvento.EVE01_INSCRIPCION_SILLA" Role="EVE01_INSCRIPCION_SILLA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_EVENTO">
+        <PropertyRef Name="EVENTO" />
+      </Principal>
+      <Dependent Role="EVE01_INSCRIPCION_SILLA">
+        <PropertyRef Name="EVENTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PARSILLA">
+    <End Type="ModelEvento.EVE01_PARTICIPANTE" Role="EVE01_PARTICIPANTE" Multiplicity="1" />
+    <End Type="ModelEvento.EVE01_INSCRIPCION_SILLA" Role="EVE01_INSCRIPCION_SILLA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_PARTICIPANTE">
+        <PropertyRef Name="PARTICIPANTE" />
+      </Principal>
+      <Dependent Role="EVE01_INSCRIPCION_SILLA">
+        <PropertyRef Name="PARTICIPANTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="EVE01_RECIBO">
+    <Key>
+      <PropertyRef Name="RECIBO" />
+    </Key>
+    <Property Type="Decimal" Name="RECIBO" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="MOVIMIENTO" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="PARTICIPANTE" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="EVENTO" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="NO_BUS" Precision="38" Scale="0" />
+    <Property Type="String" Name="NOMBRE" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="CANTIDAD" Precision="38" Scale="0" />
+    <Property Type="String" Name="CANTIDAD_LETRAS" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ESTADO_REGISTRO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="USUARIO_CREACION" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA_CREACION" Precision="0" />
+    <Property Type="String" Name="USUARIO_MODIFICACION" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA_MODIFICACION" Precision="0" />
+    <NavigationProperty Name="EVE01_EVENTO" Relationship="ModelEvento.FK_REC_EV" FromRole="EVE01_RECIBO" ToRole="EVE01_EVENTO" />
+    <NavigationProperty Name="EVE01_MOVIMIENTO" Relationship="ModelEvento.FK_REC_mov" FromRole="EVE01_RECIBO" ToRole="EVE01_MOVIMIENTO" />
+    <NavigationProperty Name="EVE01_PARTICIPANTE" Relationship="ModelEvento.FK_REC_PA" FromRole="EVE01_RECIBO" ToRole="EVE01_PARTICIPANTE" />
+  </EntityType>
+  <Association Name="FK_REC_EV">
+    <End Type="ModelEvento.EVE01_EVENTO" Role="EVE01_EVENTO" Multiplicity="0..1" />
+    <End Type="ModelEvento.EVE01_RECIBO" Role="EVE01_RECIBO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_EVENTO">
+        <PropertyRef Name="EVENTO" />
+      </Principal>
+      <Dependent Role="EVE01_RECIBO">
+        <PropertyRef Name="EVENTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_REC_mov">
+    <End Type="ModelEvento.EVE01_MOVIMIENTO" Role="EVE01_MOVIMIENTO" Multiplicity="0..1" />
+    <End Type="ModelEvento.EVE01_RECIBO" Role="EVE01_RECIBO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_MOVIMIENTO">
+        <PropertyRef Name="MOVIMIENTO" />
+      </Principal>
+      <Dependent Role="EVE01_RECIBO">
+        <PropertyRef Name="MOVIMIENTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_REC_PA">
+    <End Type="ModelEvento.EVE01_PARTICIPANTE" Role="EVE01_PARTICIPANTE" Multiplicity="0..1" />
+    <End Type="ModelEvento.EVE01_RECIBO" Role="EVE01_RECIBO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_PARTICIPANTE">
+        <PropertyRef Name="PARTICIPANTE" />
+      </Principal>
+      <Dependent Role="EVE01_RECIBO">
+        <PropertyRef Name="PARTICIPANTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="EVE01_INSCRIPCION_HOSPEDAJE">
+    <Key>
+      <PropertyRef Name="EVENTO" />
+      <PropertyRef Name="PARTICIPANTE" />
+    </Key>
+    <Property Type="Decimal" Name="EVENTO" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="PARTICIPANTE" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="String" Name="ENCARGADO" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TELEFONO" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DIRECCION" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ESTADO_REGISTRO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="USUARIO_CREACION" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA_CREACION" Precision="0" />
+    <Property Type="String" Name="USUARIO_MODIFICACION" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA_MODIFICACION" Precision="0" />
+    <NavigationProperty Name="EVE01_EVENTO" Relationship="ModelEvento.hosp_EV_FK" FromRole="EVE01_INSCRIPCION_HOSPEDAJE" ToRole="EVE01_EVENTO" />
+    <NavigationProperty Name="EVE01_PARTICIPANTE" Relationship="ModelEvento.hosp_PAR_FK" FromRole="EVE01_INSCRIPCION_HOSPEDAJE" ToRole="EVE01_PARTICIPANTE" />
+  </EntityType>
+  <Association Name="hosp_EV_FK">
+    <End Type="ModelEvento.EVE01_EVENTO" Role="EVE01_EVENTO" Multiplicity="1" />
+    <End Type="ModelEvento.EVE01_INSCRIPCION_HOSPEDAJE" Role="EVE01_INSCRIPCION_HOSPEDAJE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_EVENTO">
+        <PropertyRef Name="EVENTO" />
+      </Principal>
+      <Dependent Role="EVE01_INSCRIPCION_HOSPEDAJE">
+        <PropertyRef Name="EVENTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="hosp_PAR_FK">
+    <End Type="ModelEvento.EVE01_PARTICIPANTE" Role="EVE01_PARTICIPANTE" Multiplicity="1" />
+    <End Type="ModelEvento.EVE01_INSCRIPCION_HOSPEDAJE" Role="EVE01_INSCRIPCION_HOSPEDAJE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_PARTICIPANTE">
+        <PropertyRef Name="PARTICIPANTE" />
+      </Principal>
+      <Dependent Role="EVE01_INSCRIPCION_HOSPEDAJE">
+        <PropertyRef Name="PARTICIPANTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="EVE01_SILLA_ANULADA">
+    <Key>
+      <PropertyRef Name="EVENTO" />
+      <PropertyRef Name="PARTICIPANTE" />
+      <PropertyRef Name="NO_SILLA" />
+    </Key>
+    <Property Type="Decimal" Name="EVENTO" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="PARTICIPANTE" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="Decimal" Name="NO_SILLA" Nullable="false" Precision="38" Scale="0" />
+    <Property Type="String" Name="ESTADO_REGISTRO" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="USUARIO_CREACION" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA_CREACION" Precision="0" />
+    <Property Type="String" Name="USUARIO_MODIFICACION" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FECHA_MODIFICACION" Precision="0" />
+    <NavigationProperty Name="EVE01_EVENTO" Relationship="ModelEvento.FK_anu_eve" FromRole="EVE01_SILLA_ANULADA" ToRole="EVE01_EVENTO" />
+    <NavigationProperty Name="EVE01_PARTICIPANTE" Relationship="ModelEvento.FK_anu_par" FromRole="EVE01_SILLA_ANULADA" ToRole="EVE01_PARTICIPANTE" />
+  </EntityType>
+  <Association Name="FK_anu_eve">
+    <End Type="ModelEvento.EVE01_EVENTO" Role="EVE01_EVENTO" Multiplicity="1" />
+    <End Type="ModelEvento.EVE01_SILLA_ANULADA" Role="EVE01_SILLA_ANULADA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_EVENTO">
+        <PropertyRef Name="EVENTO" />
+      </Principal>
+      <Dependent Role="EVE01_SILLA_ANULADA">
+        <PropertyRef Name="EVENTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_anu_par">
+    <End Type="ModelEvento.EVE01_PARTICIPANTE" Role="EVE01_PARTICIPANTE" Multiplicity="1" />
+    <End Type="ModelEvento.EVE01_SILLA_ANULADA" Role="EVE01_SILLA_ANULADA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_PARTICIPANTE">
+        <PropertyRef Name="PARTICIPANTE" />
+      </Principal>
+      <Dependent Role="EVE01_SILLA_ANULADA">
+        <PropertyRef Name="PARTICIPANTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

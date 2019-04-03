@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModeloEvento.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="11.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ModeloEventoStoreContainer">
+    <EntitySet Name="EVE01_USUARIO" EntityType="ModeloEvento.Store.EVE01_USUARIO" store:Type="Tables" Schema="EVE01" />
+  </EntityContainer>
+  <EntityType Name="EVE01_USUARIO">
+    <Key>
+      <PropertyRef Name="USUARIO" />
+    </Key>
+    <Property Name="USUARIO" Type="varchar2" Nullable="false" MaxLength="50" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="150" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+    <Property Name="PASSWORD" Type="varchar2" MaxLength="250" />
+    <Property Name="EMAIL" Type="varchar2" MaxLength="128" />
+    <Property Name="ESTADO_REGISTRO" Type="char" MaxLength="1" />
+    <Property Name="USUARIO_CREACION" Type="varchar2" MaxLength="100" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="USUARIO_MODIFICACION" Type="varchar2" MaxLength="100" />
+    <Property Name="FECHA_MODIFICACION" Type="date" />
+  </EntityType>
+</Schema>

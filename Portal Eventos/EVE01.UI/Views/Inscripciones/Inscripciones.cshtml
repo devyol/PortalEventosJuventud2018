@@ -1,0 +1,439 @@
+﻿
+<div class="row">
+	<div class="col-md-12 panel-primary">
+		<div class="content-box-header panel-heading">
+		  	<div class="panel-title ">                  
+                  <a href="#" data-rel="collapse" ng-click="regresarListado()"><i class="glyphicon glyphicon-circle-arrow-left"></i> Regresar</a>
+		  	</div>
+		</div>
+		<div class="content-box-large box-with-header">
+            <!--Validacion de Evento Asignado-->
+            <div ng-hide="valida.activo">
+                <div>
+                    <h4><u><strong>Inicie un Evento para Inscribir al Participante</strong></u></h4>
+                </div>
+                <a ui-sref="asignacionevento">Iniciar Evento</a>
+            </div>
+             <!--Validacion de Evento Asignado-->
+            <div ng-show="valida.activo">
+
+                <div class="row">
+                    <div class="col-md-9">
+                            <!-- Valida si esta informacion actualizada para los participantes-->
+                            <div class="alert alert-danger" ng-hide="participante.validaActualizacionEvento">
+                                <strong>Pendiente Actualizar Datos del Participante!!!</strong>
+                            </div>
+                            <div class="alert alert-success" ng-hide="!participante.validaActualizacionEvento">
+                              <strong>Datos del Participante Actualizados!</strong>
+                            </div>
+                            <!-- Valida si esta informacion actualizada para los participantes-->
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-success" ng-click="actualizarDatosEvento()">ACTUALIZAR DATOS</button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <h4><strong>{{participante.nombre}} {{participante.apellido}} </strong><span class="label label-primary">{{participante.validaInscripcion}}</span></h4>                        
+                    </div>
+                    <div class="col-md-3">
+                            <div class="btn btn-success" ng-click="Inscribir(participante)" ng-hide="participante.validaInscripcionbool">INSCRIBIR</div>
+                            <div class="btn btn-danger" ng-click="Anular(participante)" ng-show="participante.validaInscripcionbool">ANULAR INSCRIPCION</div>
+                    </div>
+                </div>
+                <br />
+                <!-----------------------------------OPCIONES DEL PARTICIPANTE----------------------------------->
+                <div class="row">
+
+                    <!---->
+                    <div class="col-md-7 panel-primary" ng-show="participante.validaInscripcionbool">
+                        <div class="content-box-header panel-heading">
+                            <div class="panel-title ">Opciones del Inscrito</div>
+                        </div>
+                        <div class="content-box-large box-with-header">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-responsive">
+                                    <thead>
+                                        <tr>
+                                            <th>Descripcion</th>
+                                            <th>Precio</th>                        
+                                            <th>valor Estado</th>
+                                            <th>Es Transporte</th>
+                                            <th>Es Hospedaje</th>                        
+                                        </tr>
+                                    </thead>
+                                    <tbody ng-repeat="opc in opcionesParticipante">
+                                        <tr>
+                                            <td>{{opc.descripcion}}</td>
+                                            <td>{{opc.precio  | currency : "Q " : 2}}</td>
+                                            <td><input type="checkbox" name="name" value="" ng-model="validaCheck" ng-checked="opc.estadoopcion" ng-click="accionCheck(validaCheck, opc)" ng-disabled="opc.es_obligatorio" /></td>
+                                            <td><button type="button" class="btn btn-primary btn-xs" ng-show="opc.es_transporte"  ng-disabled="!opc.estadoopcion" ng-click="mostralModalAsignacionBuses()">Asignar Bus</button></td>
+                                            <td><button type="button" class="btn btn-primary btn-xs" ng-show="opc.es_hospedaje"  ng-click="mostralModalAnotacionHospedaje()">Registrar Dirección</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+
+                    <!---->
+                    <div class="col-md-3 panel-primary" ng-show="participante.validaInscripcionbool">
+                        <div class="content-box-header panel-heading">
+                            <div class="panel-title ">Saldos</div>
+                        </div>
+                        <div class="content-box-large box-with-header">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <td>Total a Pagar:</td>
+                                            <td><strong>{{saldo.total | currency : "Q " : 2}}</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Saldo Abonado:</td>
+                                            <td><strong>{{saldo.saldoAbonado  | currency : "Q " : 2}}</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Saldo Pendiente:</td>
+                                            <td><strong>{{saldo.saldoPendiente | currency : "Q " : 2}}</strong></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+
+                    <!---->
+                    <div class="col-md-2 panel-primary" ng-show="participante.validaInscripcionbool">
+                        <div class="content-box-header panel-heading">
+                            <div class="panel-title ">Información</div>
+                        </div>
+                        <div class="content-box-large box-with-header">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <tbody >
+                                        <tr>
+                                            <td>Bus Asignado</td>
+                                            <td><strong>{{informacionBusAsignado}}</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Silla Asignada</td>
+                                            <td>{{inscripcionSilla.noSilla}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!---->
+
+                </div>
+                <!-----------------------------------OPCIONES DEL PARTICIPANTE----------------------------------->
+
+                <!-----------------------------------GESTION DE PAGOS----------------------------------->
+                <div class="row">
+                    <div class="col-md-12 panel-primary" ng-show="participante.validaInscripcionbool">
+                        <div class="content-box-header panel-heading">
+                            <div class="panel-title ">Gestion de Pagos</div>
+                            <div class="panel-options">
+                                <a href="#" data-rel="reload" ng-click="irNotaCredito()">Nota Credito <i class="glyphicon glyphicon-circle-arrow-right"></i></a>                                
+                            </div>
+                        </div>
+                        <div class="content-box-large box-with-header">
+
+                            <div class="row">
+                                <!--AREA DE SELECCION DE TIPO DE PAGO-->
+                                <div class="col-md-4">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                                <tr>
+                                                    <td><input type="radio" ng-model="tipopago.opcion" name="name" value="efectivo" /></td>
+                                                    <td>EFECTIVO</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="radio" ng-model="tipopago.opcion" name="name" value="cheque" /></td>
+                                                    <td>CHEQUE</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!--AREA DE SELECCION DE PAGOS-->
+                                <div class="col-md-5">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>                                        
+                                                    <td><input type="radio" ng-model="pago.opcion" value="abono" ng-click="clickradio(pago.opcion)"/></td>
+                                                    <td>ABONO</td>
+                                                    <td><input type="text" class="form-control input-sm" ng-model="cantidad" id="focustext" name="name" value=" " ng-disabled="valtext"/></td>                                               
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="radio" ng-model="pago.opcion" value="total" ng-click="clickradio(pago.opcion)" /></td>
+                                                    <td>PAGO TOTAL</td>
+                                                    <td>{{saldo.saldoPendiente | currency : "Q " : 2}}</td> 
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!--AREA DEL BOTON DE PAGO-->
+                                <div class="col-md-3">
+                                    <button class="btn btn-primary btn-sm" ng-click="pagar(tipopago.opcion,cantidad,participante,pago.opcion,saldo.saldoPendiente)"> COBRAR </button>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-----------------------------------HISTORIAL DE PAGOS----------------------------------->
+                <div class="row">
+                    <div class="col-md-12 panel-primary" ng-show="participante.validaInscripcionbool">
+                        <div class="content-box-header panel-heading">
+                            <div class="panel-title ">Historial de Pagos</div>
+                        </div>
+                        <div class="content-box-large box-with-header">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Fecha del Movimiento</th>
+                                            <th>Tipo Movimiento</th>
+                                            <th>Tipo de Pago</th>
+                                            <th>Monto</th>
+                                            <th>Usuario Gestion</th>
+                                            <th>Imprimir Recibo</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody ng-repeat="mov in movimientos">
+                                        <tr>
+                                            <td>{{mov.fechaCreacion| date:'dd/MM/yyyy HH:mm:ss'}}</td>
+                                            <td>{{mov.descripcionTipoMovimiento}}</td>
+                                            <td>{{mov.descripcionTipoPago}}</td>
+                                            <td>{{mov.cantidad | currency : "Q " : 2}}</td>
+                                            <td>{{mov.usuarioCreacion}}</td>
+                                            <td><button class="btn btn-primary btn-xs" ng-click="irRecibo(mov)">Imprimir</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-----------------------------------HISTORIAL DE NOTAS DE CREDITO----------------------------------->
+                <div class="row">
+                    <div class="col-md-12 panel-primary" ng-show="participante.validaInscripcionbool">
+                        <div class="content-box-header panel-heading">
+                            <div class="panel-title ">Historial de Notas de Crédito</div>
+                        </div>
+                        <div class="content-box-large box-with-header">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Fecha del Movimiento</th>
+                                            <th>Tipo Movimiento</th>
+                                            <th>Tipo de Pago</th>
+                                            <th>Monto</th>
+                                            <th>Usuario Gestion</th>
+                                            <!--<th>Imprimir Recibo</th>-->
+                                        </tr>
+                                    </thead>
+                                    <tbody ng-repeat="movc in movimientosCargos">
+                                        <tr>
+                                            <td>{{movc.fechaCreacion| date:'dd/MM/yyyy HH:mm:ss'}}</td>
+                                            <td>{{movc.descripcionTipoMovimiento}}</td>
+                                            <td>{{movc.descripcionTipoPago}}</td>
+                                            <td>{{movc.cantidad | currency : "Q " : 2}}</td>
+                                            <td>{{movc.usuarioCreacion}}</td>
+                                            <!--<td><button class="btn btn-primary btn-xs" ng-click="irRecibo(mov)">Imprimir</button></td>-->
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-----------------------------------HISTORIAL DE MOVIMIENTO ANULADOS----------------------------------->
+                <div class="row">
+                    <div class="col-md-12 panel-primary" ng-show="participante.validaInscripcionbool">
+                        <div class="content-box-header panel-heading">
+                            <div class="panel-title ">Historial de Movimientos Anulados</div>
+                        </div>
+                        <div class="content-box-large box-with-header">
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Fecha del Movimiento</th>
+                                            <th>Tipo Movimiento</th>
+                                            <th>Tipo de Pago</th>
+                                            <th>Monto</th>
+                                            <th>Usuario Gestion</th>
+                                            <!--<th>Imprimir Recibo</th>-->
+                                        </tr>
+                                    </thead>
+                                    <tbody ng-repeat="mova in movimientosAnulados">
+                                        <tr>
+                                            <td>{{mova.fechaCreacion| date:'dd/MM/yyyy HH:mm:ss'}}</td>
+                                            <td>{{mova.descripcionTipoMovimiento}}</td>
+                                            <td>{{mova.descripcionTipoPago}}</td>
+                                            <td>{{mova.cantidad | currency : "Q " : 2}}</td>
+                                            <td>{{mova.usuarioCreacion}}</td>
+                                            <!--<td><button class="btn btn-primary btn-xs" ng-click="irRecibo(mov)">Imprimir</button></td>-->
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>				  			
+		</div>
+	</div>    
+</div>
+
+
+<!------------------------------------Modal para asignar Buses------------------------------------->
+
+<div class="modal fade" id="ModalAsignarBus" role="dialog" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="row">
+                        <div class="col-md-12 panel-primary" ng-show="participante.validaInscripcionbool">
+                            <div class="content-box-header panel-heading">
+                                <div class="panel-title ">Buses</div>
+                            </div>
+                            <div class="content-box-large box-with-header">
+
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>No. Bus</th>
+                                            <th>Capacidad</th>
+                                            <th>Disponibles</th>
+                                            <th>Ocupado</th>
+                                            <th>Hora de Salida</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody ng-repeat="bus in informacionBuses">
+                                        <tr>
+                                            <td>{{bus.noBus}}</td>
+                                            <td>{{bus.capacidad}}</td>
+                                            <td>{{bus.disponible}}</td>
+                                            <td>{{bus.ocupado}}</td>
+                                            <td>{{bus.horaSalida}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 panel-primary" ng-show="participante.validaInscripcionbool">
+                            <div class="content-box-header panel-heading">
+                                <div class="panel-title ">Bus Asignado</div>
+                            </div>
+                            <div class="content-box-large box-with-header">
+
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>No. Bus</th>
+                                            <th>Seleccion</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody ng-repeat="asig in busesDisponibles">
+                                        <tr>
+                                            <td>{{asig.noBus}}</td>
+                                            <td><input type="radio" name="name" value=" " ng-click="asignacionBus(asig)" ng-checked="asig.validabusasignado" /></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!------------------------------------Modal para asignar Anotacion de Hospedaje------------------------------------->
+
+<div class="modal fade" id="ModalAnotacionHospedaje" role="dialog" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="row">
+                        <div class="col-md-12 panel-primary">
+                            <div class="content-box-header panel-heading">
+                                <div class="panel-title ">Anotacion de Hospedaje</div>
+                            </div>
+                            <div class="content-box-large box-with-header">
+
+                            <form>
+                                <div class="form-group">
+                                    <label>Dueño de Casa</label>
+                                    <input class="form-control" ng-model="inscripcionHospedaje.encargado" type="text"/>
+                                </div>
+                                <div class="form-group">
+                                    <label>Direccion</label>
+                                    <input class="form-control" ng-model="inscripcionHospedaje.direccion" type="text"/>
+                                </div>
+                                <div class="form-group">
+                                    <label>Telefono</label>
+                                    <input class="form-control" ng-model="inscripcionHospedaje.telefono" type="text"/>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-primary btn-sm" ng-click="registroHospedaje(inscripcionHospedaje)">Guardar</button>
+                                </div>
+                            </form>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@*<div class="row">
+    <div class="col-md-12 panel-primary" ng-show="participante.validaInscripcionbool">
+        <div class="content-box-header panel-heading">
+            <div class="panel-title ">Historial de Pagos</div>
+        </div>
+        <div class="content-box-large box-with-header">
+
+        </div>
+    </div>
+</div>*@

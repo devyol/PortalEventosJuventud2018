@@ -1,0 +1,31 @@
+﻿
+    <div class="col-md-12">
+	    <div class="content-box-large">
+		    <div class="panel-heading">
+			    <div class="panel-title">ASIGNACION DE EVENTO</div>
+		    </div>
+
+		    <div class="panel-body">
+                <form class="form-horizontal">
+                <div class="form-group row">
+                    <label class="col-sm-3 form-control-label">Seleccione Evento</label>
+                    <div class="col-sm-6">
+                    <select class="form-control"
+                            ng-model="evento.idEvento"
+                            ng-options="evento.idEvento as evento.Nombre for evento in eventos"></select>
+                    </div>
+                </div>
+
+                <div class="form-group row">       
+                    <div class="col-sm-9 offset-sm-3">
+                    <button class="btn btn-primary" ng-click="AsignarEvento(evento)">Asignar</button>
+                    </div>
+                </div>
+                </form>
+		    </div>
+	    </div>
+    </div>
+
+
+
+

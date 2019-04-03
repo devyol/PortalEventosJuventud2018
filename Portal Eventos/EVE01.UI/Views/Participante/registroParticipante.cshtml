@@ -1,0 +1,67 @@
+﻿<div class="row">
+    <div class="col-md-12 panel-primary">
+        <div class="content-box-header panel-heading">
+            <div class="panel-title ">Nuevo Participante</div>
+        </div>
+        <div class="content-box-large box-with-header">
+
+            <!--Validacion de Evento Asignado-->
+            <div ng-hide="valida.activo">
+                <div>
+                    <h4><u><strong>Inicie un Evento para Registrar al Participante</strong></u></h4>
+                </div>
+                <a ui-sref="asignacionevento">Iniciar Evento</a>
+            </div>
+
+             <!--Validacion de Evento Asignado-->
+            <div ng-show="valida.activo">
+                <form>
+                <div class="form-group">
+                    <label>Nombres</label>
+                    <input class="form-control" ng-model="participante.nombre" type="text" name="name" value=" "  required/>
+                </div>
+                <div class="form-group">
+                    <label>Apellidos</label>
+                    <input class="form-control" ng-model="participante.apellido" type="text" name="name" value=" " required/>
+                </div>
+                <div class="form-group">
+                    <label>Telefono</label>
+                    <input class="form-control" ng-model="participante.telefono" type="text" name="name" value=" " required/>
+                </div>
+                <div class="form-group">
+                    <label>Correo</label>
+                    <input class="form-control" ng-model="participante.correo" type="text" name="name" value=" " />
+                </div>
+                <div class="form-group">
+                    <label>Talla</label>
+                    <input class="form-control" ng-model="participante.talla" type="text" name="name" value=" " />
+                </div>
+                <div class="form-group">
+                    <label>Genero</label>
+                    <select class="form-control" ng-model="participante.genero" ng-options="g.genero as g.descripcion for g in generos"></select>
+                </div>
+                <div class="form-group">
+                    <label>Fecha Nacimiento</label>
+                    <input class="form-control" ng-model="participante.fechaNacimiento" type="date" name="name" value="" required/>
+                </div>
+				<div>
+					<div class="btn btn-primary" ng-click="guardarParticipante(participante)">
+						<i class="glyphicon glyphicon-floppy-disk"></i>
+						Registrar
+					</div>
+				</div>
+            </form>
+            </div>
+            
+
+        </div>
+    </div>
+</div>
+
+
+@*<div class="row">
+    <div class="content-box-large">
+        <div class="panel-body">
+        </div>
+    </div>
+</div>*@

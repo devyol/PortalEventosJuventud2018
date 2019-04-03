@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModeloEvento" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="EntitiesEVE01" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="EVE01_USUARIO" EntityType="ModeloEvento.EVE01_USUARIO" />
+  </EntityContainer>
+  <EntityType Name="EVE01_USUARIO">
+    <Key>
+      <PropertyRef Name="USUARIO" />
+    </Key>
+    <Property Name="USUARIO" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="PASSWORD" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="ESTADO_REGISTRO" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="USUARIO_CREACION" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="FECHA_CREACION" Type="DateTime" />
+    <Property Name="USUARIO_MODIFICACION" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="FECHA_MODIFICACION" Type="DateTime" />
+  </EntityType>
+</Schema>

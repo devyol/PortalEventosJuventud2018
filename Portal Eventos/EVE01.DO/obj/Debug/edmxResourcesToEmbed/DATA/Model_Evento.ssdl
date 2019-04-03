@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModeloEvento.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="11.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ModeloEventoStoreContainer">
+    <EntitySet Name="EVE01_AREA_SERVICIO" EntityType="ModeloEvento.Store.EVE01_AREA_SERVICIO" store:Type="Tables" Schema="EVE01" />
+    <EntitySet Name="EVE01_CORRELATIVO" EntityType="ModeloEvento.Store.EVE01_CORRELATIVO" store:Type="Tables" Schema="EVE01" />
+    <EntitySet Name="EVE01_ESTADO" EntityType="ModeloEvento.Store.EVE01_ESTADO" store:Type="Tables" Schema="EVE01" />
+    <EntitySet Name="EVE01_EVENTO" EntityType="ModeloEvento.Store.EVE01_EVENTO" store:Type="Tables" Schema="EVE01" />
+    <EntitySet Name="EVE01_EVENTO_ACTUALIZACION" EntityType="ModeloEvento.Store.EVE01_EVENTO_ACTUALIZACION" store:Type="Tables" Schema="EVE01" />
+    <EntitySet Name="EVE01_EVENTO_OPCION" EntityType="ModeloEvento.Store.EVE01_EVENTO_OPCION" store:Type="Tables" Schema="EVE01" />
+    <EntitySet Name="EVE01_INSCRIPCION" EntityType="ModeloEvento.Store.EVE01_INSCRIPCION" store:Type="Tables" Schema="EVE01" />
+    <EntitySet Name="EVE01_INSCRIPCION_OPCION" EntityType="ModeloEvento.Store.EVE01_INSCRIPCION_OPCION" store:Type="Tables" Schema="EVE01" />
+    <EntitySet Name="EVE01_PARTICIPANTE" EntityType="ModeloEvento.Store.EVE01_PARTICIPANTE" store:Type="Tables" Schema="EVE01" />
+    <EntitySet Name="EVE01_PARTICIPANTE_SERVICIO" EntityType="ModeloEvento.Store.EVE01_PARTICIPANTE_SERVICIO" store:Type="Tables" Schema="EVE01" />
+    <EntitySet Name="EVE01_USUARIO" EntityType="ModeloEvento.Store.EVE01_USUARIO" store:Type="Tables" Schema="EVE01" />
+    <AssociationSet Name="FK_AREA_AREA" Association="ModeloEvento.Store.FK_AREA_AREA">
+      <End Role="EVE01_AREA_SERVICIO" EntitySet="EVE01_AREA_SERVICIO" />
+      <End Role="EVE01_PARTICIPANTE_SERVICIO" EntitySet="EVE01_PARTICIPANTE_SERVICIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PART_PART" Association="ModeloEvento.Store.FK_PART_PART">
+      <End Role="EVE01_PARTICIPANTE" EntitySet="EVE01_PARTICIPANTE" />
+      <End Role="EVE01_PARTICIPANTE_SERVICIO" EntitySet="EVE01_PARTICIPANTE_SERVICIO" />
+    </AssociationSet>
+    <AssociationSet Name="INSC_EV_FK" Association="ModeloEvento.Store.INSC_EV_FK">
+      <End Role="EVE01_EVENTO" EntitySet="EVE01_EVENTO" />
+      <End Role="EVE01_INSCRIPCION" EntitySet="EVE01_INSCRIPCION" />
+    </AssociationSet>
+    <AssociationSet Name="INSC_OP_INSC_FK" Association="ModeloEvento.Store.INSC_OP_INSC_FK">
+      <End Role="EVE01_INSCRIPCION" EntitySet="EVE01_INSCRIPCION" />
+      <End Role="EVE01_INSCRIPCION_OPCION" EntitySet="EVE01_INSCRIPCION_OPCION" />
+    </AssociationSet>
+    <AssociationSet Name="INSC_OP_OP_EV_FK" Association="ModeloEvento.Store.INSC_OP_OP_EV_FK">
+      <End Role="EVE01_EVENTO_OPCION" EntitySet="EVE01_EVENTO_OPCION" />
+      <End Role="EVE01_INSCRIPCION_OPCION" EntitySet="EVE01_INSCRIPCION_OPCION" />
+    </AssociationSet>
+    <AssociationSet Name="INSC_PAR_FK" Association="ModeloEvento.Store.INSC_PAR_FK">
+      <End Role="EVE01_PARTICIPANTE" EntitySet="EVE01_PARTICIPANTE" />
+      <End Role="EVE01_INSCRIPCION" EntitySet="EVE01_INSCRIPCION" />
+    </AssociationSet>
+    <AssociationSet Name="REF_EV_FK" Association="ModeloEvento.Store.REF_EV_FK">
+      <End Role="EVE01_EVENTO" EntitySet="EVE01_EVENTO" />
+      <End Role="EVE01_EVENTO_OPCION" EntitySet="EVE01_EVENTO_OPCION" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="EVE01_AREA_SERVICIO">
+    <Key>
+      <PropertyRef Name="AREA" />
+    </Key>
+    <Property Name="AREA" Type="number" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="50" />
+    <Property Name="ESTADO_REGISTRO" Type="char" MaxLength="1" />
+    <Property Name="USUARIO_CREACION" Type="varchar2" MaxLength="100" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="USUARIO_MODIFICACION" Type="varchar2" MaxLength="100" />
+    <Property Name="FECHA_MODIFICACION" Type="date" />
+  </EntityType>
+  <EntityType Name="EVE01_CORRELATIVO">
+    <Key>
+      <PropertyRef Name="CORRELATIVO" />
+    </Key>
+    <Property Name="CORRELATIVO" Type="number" Nullable="false" />
+    <Property Name="CORRELATIVO_DISPONIBLE" Type="number" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="150" />
+    <Property Name="ESTADO_REGISTRO" Type="char" MaxLength="1" />
+    <Property Name="USUARIO_CREACION" Type="varchar2" MaxLength="50" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="USUARIO_MODIFICACION" Type="varchar2" MaxLength="50" />
+    <Property Name="FECHA_MODIFICACION" Type="date" />
+  </EntityType>
+  <EntityType Name="EVE01_ESTADO">
+    <Key>
+      <PropertyRef Name="ESTADO" />
+    </Key>
+    <Property Name="ESTADO" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="25" />
+    <Property Name="USUARIO_CREACION" Type="varchar2" MaxLength="100" />
+    <Property Name="FECHA_CREACION" Type="date" />
+  </EntityType>
+  <EntityType Name="EVE01_EVENTO">
+    <Key>
+      <PropertyRef Name="EVENTO" />
+    </Key>
+    <Property Name="EVENTO" Type="number" Nullable="false" />
+    <Property Name="NOMBRE_EVENTO" Type="varchar2" Nullable="false" MaxLength="350" />
+    <Property Name="FECHA_INICIO" Type="varchar2" Nullable="false" MaxLength="25" />
+    <Property Name="FECHA_FIN" Type="varchar2" Nullable="false" MaxLength="25" />
+    <Property Name="APLICA_BUS" Type="char" MaxLength="1" />
+    <Property Name="ESTADO_REGISTRO" Type="char" MaxLength="1" />
+    <Property Name="USUARIO_CREACION" Type="varchar2" MaxLength="100" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="USUARIO_MODIFICACION" Type="varchar2" MaxLength="100" />
+    <Property Name="FECHA_MODIFICACION" Type="date" />
+  </EntityType>
+  <EntityType Name="EVE01_EVENTO_ACTUALIZACION">
+    <Key>
+      <PropertyRef Name="EVENTO" />
+      <PropertyRef Name="PARTICIPANTE" />
+    </Key>
+    <Property Name="EVENTO" Type="number" Nullable="false" />
+    <Property Name="PARTICIPANTE" Type="number" Nullable="false" />
+    <Property Name="ESTADO_REGISTO" Type="char" MaxLength="1" />
+    <Property Name="USUARIO_CREACION" Type="varchar2" MaxLength="100" />
+    <Property Name="FECHA_CREACION" Type="date" />
+  </EntityType>
+  <EntityType Name="EVE01_EVENTO_OPCION">
+    <Key>
+      <PropertyRef Name="OPCION" />
+    </Key>
+    <Property Name="OPCION" Type="number" Nullable="false" />
+    <Property Name="EVENTO" Type="number" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="300" />
+    <Property Name="PRECIO" Type="number" />
+    <Property Name="OBLIGATORIO" Type="char" MaxLength="1" />
+    <Property Name="ES_TRANSPORTE" Type="char" MaxLength="1" />
+    <Property Name="ESTADO_REGISTRO" Type="char" MaxLength="1" />
+    <Property Name="USUARIO_CREACION" Type="varchar2" MaxLength="100" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="USUARIO_MODIFICACION" Type="varchar2" MaxLength="100" />
+    <Property Name="FECHA_MODIFICACION" Type="date" />
+  </EntityType>
+  <EntityType Name="EVE01_INSCRIPCION">
+    <Key>
+      <PropertyRef Name="EVENTO" />
+      <PropertyRef Name="PARTICIPANTE" />
+    </Key>
+    <Property Name="EVENTO" Type="number" Nullable="false" />
+    <Property Name="PARTICIPANTE" Type="number" Nullable="false" />
+    <Property Name="FECHA_INSCRIPCION" Type="date" />
+    <Property Name="ESTADO_REGISTRO" Type="char" MaxLength="1" />
+    <Property Name="USUARIO_CREACION" Type="varchar2" MaxLength="100" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="USUARIO_MODIFICACION" Type="varchar2" MaxLength="100" />
+    <Property Name="FECHA_MODIFICACION" Type="date" />
+  </EntityType>
+  <EntityType Name="EVE01_INSCRIPCION_OPCION">
+    <Key>
+      <PropertyRef Name="PARTICIPANTE" />
+      <PropertyRef Name="EVENTO" />
+      <PropertyRef Name="OPCION" />
+    </Key>
+    <Property Name="PARTICIPANTE" Type="number" Nullable="false" />
+    <Property Name="EVENTO" Type="number" Nullable="false" />
+    <Property Name="OPCION" Type="number" Nullable="false" />
+    <Property Name="ESTADO_REGISTRO" Type="char" MaxLength="1" />
+    <Property Name="USUARIO_CREACION" Type="varchar2" MaxLength="100" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="USUARIO_MODIFICACION" Type="varchar2" MaxLength="100" />
+    <Property Name="FECHA_MODIFICACION" Type="date" />
+  </EntityType>
+  <EntityType Name="EVE01_PARTICIPANTE">
+    <Key>
+      <PropertyRef Name="PARTICIPANTE" />
+    </Key>
+    <Property Name="PARTICIPANTE" Type="number" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="250" />
+    <Property Name="APELLIDO" Type="varchar2" MaxLength="250" />
+    <Property Name="DIRECCION" Type="varchar2" MaxLength="500" />
+    <Property Name="TELEFONO" Type="varchar2" MaxLength="25" />
+    <Property Name="CORREO" Type="varchar2" MaxLength="100" />
+    <Property Name="TALLA" Type="varchar2" MaxLength="10" />
+    <Property Name="GENERO" Type="char" MaxLength="1" />
+    <Property Name="FECHA_NACIMIENTO" Type="date" />
+    <Property Name="ALERJICO" Type="char" MaxLength="1" />
+    <Property Name="OBSERVACIONES" Type="varchar2" MaxLength="2500" />
+    <Property Name="ESTADO_REGISTRO" Type="char" MaxLength="1" />
+    <Property Name="USUARIO_CREACION" Type="varchar2" MaxLength="100" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="USUARIO_MODIFICACION" Type="varchar2" MaxLength="100" />
+    <Property Name="FECHA_MODIFICACION" Type="date" />
+  </EntityType>
+  <EntityType Name="EVE01_PARTICIPANTE_SERVICIO">
+    <Key>
+      <PropertyRef Name="PARTICIPANTE" />
+      <PropertyRef Name="AREA_SERVICIO" />
+    </Key>
+    <Property Name="PARTICIPANTE" Type="number" Nullable="false" />
+    <Property Name="AREA_SERVICIO" Type="number" Nullable="false" />
+    <Property Name="ESTADO_REGISTRO" Type="char" MaxLength="1" />
+    <Property Name="USUARIO_CREACION" Type="varchar2" MaxLength="100" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="USUARIO_MODIFICACION" Type="varchar2" MaxLength="100" />
+    <Property Name="FECHA_MODIFICACION" Type="date" />
+  </EntityType>
+  <EntityType Name="EVE01_USUARIO">
+    <Key>
+      <PropertyRef Name="USUARIO" />
+    </Key>
+    <Property Name="USUARIO" Type="varchar2" Nullable="false" MaxLength="50" />
+    <Property Name="NOMBRE" Type="varchar2" MaxLength="150" />
+    <Property Name="DESCRIPCION" Type="varchar2" MaxLength="100" />
+    <Property Name="PASSWORD" Type="varchar2" MaxLength="250" />
+    <Property Name="EMAIL" Type="varchar2" MaxLength="128" />
+    <Property Name="ESTADO_REGISTRO" Type="char" MaxLength="1" />
+    <Property Name="USUARIO_CREACION" Type="varchar2" MaxLength="100" />
+    <Property Name="FECHA_CREACION" Type="date" />
+    <Property Name="USUARIO_MODIFICACION" Type="varchar2" MaxLength="100" />
+    <Property Name="FECHA_MODIFICACION" Type="date" />
+  </EntityType>
+  <Association Name="FK_AREA_AREA">
+    <End Role="EVE01_AREA_SERVICIO" Type="ModeloEvento.Store.EVE01_AREA_SERVICIO" Multiplicity="1" />
+    <End Role="EVE01_PARTICIPANTE_SERVICIO" Type="ModeloEvento.Store.EVE01_PARTICIPANTE_SERVICIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_AREA_SERVICIO">
+        <PropertyRef Name="AREA" />
+      </Principal>
+      <Dependent Role="EVE01_PARTICIPANTE_SERVICIO">
+        <PropertyRef Name="AREA_SERVICIO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PART_PART">
+    <End Role="EVE01_PARTICIPANTE" Type="ModeloEvento.Store.EVE01_PARTICIPANTE" Multiplicity="1" />
+    <End Role="EVE01_PARTICIPANTE_SERVICIO" Type="ModeloEvento.Store.EVE01_PARTICIPANTE_SERVICIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_PARTICIPANTE">
+        <PropertyRef Name="PARTICIPANTE" />
+      </Principal>
+      <Dependent Role="EVE01_PARTICIPANTE_SERVICIO">
+        <PropertyRef Name="PARTICIPANTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="INSC_EV_FK">
+    <End Role="EVE01_EVENTO" Type="ModeloEvento.Store.EVE01_EVENTO" Multiplicity="1" />
+    <End Role="EVE01_INSCRIPCION" Type="ModeloEvento.Store.EVE01_INSCRIPCION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_EVENTO">
+        <PropertyRef Name="EVENTO" />
+      </Principal>
+      <Dependent Role="EVE01_INSCRIPCION">
+        <PropertyRef Name="EVENTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="INSC_OP_INSC_FK">
+    <End Role="EVE01_INSCRIPCION" Type="ModeloEvento.Store.EVE01_INSCRIPCION" Multiplicity="1" />
+    <End Role="EVE01_INSCRIPCION_OPCION" Type="ModeloEvento.Store.EVE01_INSCRIPCION_OPCION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_INSCRIPCION">
+        <PropertyRef Name="EVENTO" />
+        <PropertyRef Name="PARTICIPANTE" />
+      </Principal>
+      <Dependent Role="EVE01_INSCRIPCION_OPCION">
+        <PropertyRef Name="EVENTO" />
+        <PropertyRef Name="PARTICIPANTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="INSC_OP_OP_EV_FK">
+    <End Role="EVE01_EVENTO_OPCION" Type="ModeloEvento.Store.EVE01_EVENTO_OPCION" Multiplicity="1" />
+    <End Role="EVE01_INSCRIPCION_OPCION" Type="ModeloEvento.Store.EVE01_INSCRIPCION_OPCION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_EVENTO_OPCION">
+        <PropertyRef Name="OPCION" />
+      </Principal>
+      <Dependent Role="EVE01_INSCRIPCION_OPCION">
+        <PropertyRef Name="OPCION" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="INSC_PAR_FK">
+    <End Role="EVE01_PARTICIPANTE" Type="ModeloEvento.Store.EVE01_PARTICIPANTE" Multiplicity="1" />
+    <End Role="EVE01_INSCRIPCION" Type="ModeloEvento.Store.EVE01_INSCRIPCION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_PARTICIPANTE">
+        <PropertyRef Name="PARTICIPANTE" />
+      </Principal>
+      <Dependent Role="EVE01_INSCRIPCION">
+        <PropertyRef Name="PARTICIPANTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="REF_EV_FK">
+    <End Role="EVE01_EVENTO" Type="ModeloEvento.Store.EVE01_EVENTO" Multiplicity="0..1" />
+    <End Role="EVE01_EVENTO_OPCION" Type="ModeloEvento.Store.EVE01_EVENTO_OPCION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EVE01_EVENTO">
+        <PropertyRef Name="EVENTO" />
+      </Principal>
+      <Dependent Role="EVE01_EVENTO_OPCION">
+        <PropertyRef Name="EVENTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,70 @@
+﻿@model EVE01.UI.Models.LoginModel
+
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Juventud Oficina Central</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->    
+    <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- styles -->    
+    <link href="~/vendor/css/styles.css" rel="stylesheet" />
+
+  </head>
+  <body class="login-bg">
+  	<div class="header">
+	     <div class="container">
+	        <div class="row">
+	           <div class="col-md-12">
+	              <!-- Logo -->
+	              <div class="logo">
+	                 <h1><a href="#">Inscripciones Juventud</a></h1>
+	              </div>
+	           </div>
+	        </div>
+	     </div>
+	</div>
+
+	<div class="page-content container">
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4">
+				<div class="login-wrapper">
+			        <div class="box">
+			            <div class="content-wrap">
+			                <h6>Iniciar Sesión</h6>
+                                @using (Html.BeginForm("Login", "Acceso", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { }))
+                                {
+                                    @Html.AntiForgeryToken()
+
+                                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                    <div class="form-group">
+                                        @Html.TextBoxFor(m => m.UserName, new{ @class = "form-control", id = "login-username", placeholder="Usuario" })                      
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", id = "login-password", placeholder = "Password" })                      
+                                    </div>
+                                      <button id="login" class="btn btn-primary signup" type="submit">Entrar</button>
+                                }           
+			            </div>
+			        </div>
+@*			        <div class="already">
+			            <p>Don't have an account yet?</p>
+			            <a href="signup.html">Sign Up</a>
+			        </div>*@
+			    </div>
+			</div>
+		</div>
+	</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="../vendor/js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="../vendor/js/custom.js"></script>
+  </body>
+</html>

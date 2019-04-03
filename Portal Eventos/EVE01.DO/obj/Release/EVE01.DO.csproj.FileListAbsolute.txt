@@ -1,0 +1,7 @@
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01.DO\bin\Release\EVE01.DO.dll.config
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01.DO\bin\Release\EVE01.DO.dll
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01.DO\bin\Release\EVE01.DO.pdb
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01.DO\bin\Release\EntityFramework.dll
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01.DO\bin\Release\EntityFramework.xml
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01.DO\obj\Release\EVE01.DO.dll
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01.DO\obj\Release\EVE01.DO.pdb

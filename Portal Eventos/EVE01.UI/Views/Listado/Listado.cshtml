@@ -1,0 +1,120 @@
+﻿
+<div class="col-md-12">
+	<div class="content-box-large">
+		<div class="panel-heading">
+			<div class="panel-title"><strong><u>{{valida.nombreActivo}}</u></strong></div>            
+    
+		</div>
+		<div class="panel-body">
+            <div ng-hide="valida.activo">
+                <a ui-sref="asignacionevento">Iniciar Evento</a>
+            </div>
+            <div ng-show="valida.activo">
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                            <input type="text" class="form-control" placeholder="APELLIDO" value="" ng-model="buscar.apellido"/>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                            <input type="text" class="form-control" placeholder="NOMBRE" value="" ng-model="buscar.nombre"/>
+                        </div>
+                    </div>
+                </div>
+            <br />
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped table-advance flip-content"  at-table at-paginated at-list="participantes | filter:buscar" at-config="configListParticipantes"
+                                    style="max-width:100%;">
+                                <thead>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td at-title="Nombre Participante" width="5%"><font color="black" size="2px">{{item.apellido}}, {{item.nombre}}</font></td>
+                                        @*<td at-title="Estado" width="1%"><strong><span class="label label-primary" ng-class="">{{item.validaInscripcion}}</span></strong></td>*@
+                                        <td at-title="Telefono" width="1%"><font color="black" size="2px">{{item.telefono}}</font></td>
+                                        <td at-title="Inscripcion / Cobros" width="1%"><a href="javascript:;" ng-click="SeleccionarParticipante(item)"><button type="button" class="btn btn-primary btn-sm">Ir a Gestión </button></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                                <at-pagination at-list="participantes" first-text="Primera" at-config="configListParticipantes"></at-pagination>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+</div>
+
+<!--Se muesran los paneles si existe un Evento Activo-->
+<div ng-show="valida.activo">
+    <!---->
+    <div class="col-md-12">
+        <div class="content-box-large">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>GENERO</th>
+                        <th>TOTAL GENERO</th>
+                        <th>TOTAL CON ALIMENTACION</th>
+                        <th>TOTAL SIN ALIMENTACION</th>
+                        <th>TOTAL CON BUS</th>
+                        <th>TOTAL SIN BUS</th>
+                        <th>MENORES DE EDAD</th>
+                        <th>MAYORES DE EDAD</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="success" ng-repeat="val in valores">
+                        <td>{{val.genero}}</td>
+                        <td>{{val.total_genero}}</td>
+                        <td>{{val.con_alimentacion}}</td>
+                        <td>{{val.sin_alimentacion}}</td>
+                        <td>{{val.con_bus}}</td>
+                        <td>{{val.sin_bus}}</td>
+                        <td>{{val.menores_edad}}</td>
+                        <td>{{val.mayores_edad}}</td>
+                    </tr>
+                    <tr class="danger" ng-repeat="tot in totales">
+                        <td><strong>{{tot.descripcion}}</strong></td>
+                        <td><strong>{{tot.total_gene}}</strong></td>
+                        <td><strong>{{tot.total_calimentacion}}</strong></td>
+                        <td><strong>{{tot.total_salimentacion}}</strong></td>
+                        <td><strong>{{tot.total_cbus}}</strong></td>
+                        <td><strong>{{tot.total_sbus}}</strong></td>
+                        <td><strong>{{tot.total_menores}}</strong></td>
+                        <td><strong>{{tot.total_mayores}}</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+            
+        </div>
+    </div>
+
+</div>
+
+
+<div ng-show="valida.activo">
+    <!---->
+    <div class="col-md-6">
+        <div class="content-box-large">
+        </div>
+    </div>
+
+    <!---->
+    <div class="col-md-6">
+        <div class="content-box-large">
+        </div>
+    </div>
+</div>
+
+
+
+

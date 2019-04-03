@@ -1,0 +1,87 @@
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01_UI\bin\EVE01_UI.dll
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01_UI\bin\EVE01_UI.pdb
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01_UI\bin\EntityFramework.dll
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01_UI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01_UI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01_UI\bin\Newtonsoft.Json.dll
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01_UI\bin\System.Web.Helpers.dll
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01_UI\bin\System.Web.Mvc.dll
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01_UI\bin\System.Web.Razor.dll
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01_UI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01_UI\bin\System.Web.WebPages.dll
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01_UI\bin\System.Web.WebPages.Razor.dll
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01_UI\bin\EntityFramework.xml
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01_UI\bin\Newtonsoft.Json.xml
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01_UI\bin\System.Web.Helpers.xml
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01_UI\bin\System.Web.Mvc.xml
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01_UI\bin\System.Web.Razor.xml
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01_UI\bin\System.Web.WebPages.xml
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01_UI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01_UI\bin\System.Web.WebPages.Razor.xml
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01_UI\obj\Debug\EVE01_UI.dll
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01_UI\obj\Debug\EVE01_UI.pdb
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01_UI\bin\EVE01.DO.dll
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01_UI\bin\EVE01.DO.pdb
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01_UI\obj\Debug\EVE01_UI.csprojResolveAssemblyReference.cache
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01_UI\bin\WebGrease.dll
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01_UI\bin\Antlr3.Runtime.dll
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01_UI\bin\System.Web.Providers.dll
+C:\Users\eyol\Documents\Erik\MULTIMEDIA\Proyecto Eventos\EVENTOS PMCG 2017\Portal Eventos\EVE01_UI\bin\System.Web.Optimization.dll
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01_UI\bin\EVE01_UI.dll
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01_UI\bin\EVE01_UI.pdb
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01_UI\bin\EntityFramework.dll
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01_UI\bin\EVE01.DO.dll
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01_UI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01_UI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01_UI\bin\Newtonsoft.Json.dll
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01_UI\bin\System.Web.Helpers.dll
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01_UI\bin\System.Web.Mvc.dll
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01_UI\bin\System.Web.Optimization.dll
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01_UI\bin\System.Web.Providers.dll
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01_UI\bin\System.Web.Razor.dll
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01_UI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01_UI\bin\System.Web.WebPages.dll
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01_UI\bin\System.Web.WebPages.Razor.dll
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01_UI\bin\WebGrease.dll
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01_UI\bin\Antlr3.Runtime.dll
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01_UI\bin\EVE01.DO.pdb
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01_UI\bin\EntityFramework.xml
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01_UI\bin\Newtonsoft.Json.xml
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01_UI\bin\System.Web.Helpers.xml
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01_UI\bin\System.Web.Mvc.xml
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01_UI\bin\System.Web.Razor.xml
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01_UI\bin\System.Web.WebPages.xml
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01_UI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01_UI\bin\System.Web.WebPages.Razor.xml
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01_UI\obj\Debug\EVE01_UI.csprojResolveAssemblyReference.cache
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01_UI\obj\Debug\EVE01_UI.dll
+C:\Users\Erik\Documents\APP .net 2012\Portal Eventos\EVE01_UI\obj\Debug\EVE01_UI.pdb
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01_UI\bin\EVE01_UI.dll
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01_UI\bin\EVE01_UI.pdb
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01_UI\bin\EntityFramework.dll
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01_UI\bin\EVE01.DO.dll
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01_UI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01_UI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01_UI\bin\Newtonsoft.Json.dll
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01_UI\bin\System.Web.Helpers.dll
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01_UI\bin\System.Web.Mvc.dll
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01_UI\bin\System.Web.Optimization.dll
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01_UI\bin\System.Web.Providers.dll
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01_UI\bin\System.Web.Razor.dll
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01_UI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01_UI\bin\System.Web.WebPages.dll
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01_UI\bin\System.Web.WebPages.Razor.dll
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01_UI\bin\WebGrease.dll
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01_UI\bin\Antlr3.Runtime.dll
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01_UI\bin\EVE01.DO.pdb
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01_UI\bin\EntityFramework.xml
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01_UI\bin\Newtonsoft.Json.xml
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01_UI\bin\System.Web.Helpers.xml
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01_UI\bin\System.Web.Mvc.xml
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01_UI\bin\System.Web.Razor.xml
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01_UI\bin\System.Web.WebPages.xml
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01_UI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01_UI\bin\System.Web.WebPages.Razor.xml
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01_UI\obj\Debug\EVE01_UI.csprojResolveAssemblyReference.cache
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01_UI\obj\Debug\EVE01_UI.dll
+C:\Users\Erik\Documents\APP SOURCE\BK EVE01\Portal Eventos\EVE01_UI\obj\Debug\EVE01_UI.pdb

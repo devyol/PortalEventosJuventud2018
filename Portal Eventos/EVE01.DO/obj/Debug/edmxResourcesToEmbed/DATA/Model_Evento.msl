@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModeloEventoStoreContainer" CdmEntityContainer="EntitiesEVE01">
+    <EntitySetMapping Name="EVE01_USUARIO">
+      <EntityTypeMapping TypeName="ModeloEvento.EVE01_USUARIO">
+        <MappingFragment StoreEntitySet="EVE01_USUARIO">
+          <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="ESTADO_REGISTRO" ColumnName="ESTADO_REGISTRO" />
+          <ScalarProperty Name="USUARIO_CREACION" ColumnName="USUARIO_CREACION" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="USUARIO_MODIFICACION" ColumnName="USUARIO_MODIFICACION" />
+          <ScalarProperty Name="FECHA_MODIFICACION" ColumnName="FECHA_MODIFICACION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EVE01_CORRELATIVO">
+      <EntityTypeMapping TypeName="ModeloEvento.EVE01_CORRELATIVO">
+        <MappingFragment StoreEntitySet="EVE01_CORRELATIVO">
+          <ScalarProperty Name="FECHA_MODIFICACION" ColumnName="FECHA_MODIFICACION" />
+          <ScalarProperty Name="USUARIO_MODIFICACION" ColumnName="USUARIO_MODIFICACION" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="USUARIO_CREACION" ColumnName="USUARIO_CREACION" />
+          <ScalarProperty Name="ESTADO_REGISTRO" ColumnName="ESTADO_REGISTRO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="CORRELATIVO_DISPONIBLE" ColumnName="CORRELATIVO_DISPONIBLE" />
+          <ScalarProperty Name="CORRELATIVO" ColumnName="CORRELATIVO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EVE01_EVENTO">
+      <EntityTypeMapping TypeName="ModeloEvento.EVE01_EVENTO">
+        <MappingFragment StoreEntitySet="EVE01_EVENTO">
+          <ScalarProperty Name="FECHA_MODIFICACION" ColumnName="FECHA_MODIFICACION" />
+          <ScalarProperty Name="USUARIO_MODIFICACION" ColumnName="USUARIO_MODIFICACION" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="USUARIO_CREACION" ColumnName="USUARIO_CREACION" />
+          <ScalarProperty Name="ESTADO_REGISTRO" ColumnName="ESTADO_REGISTRO" />
+          <ScalarProperty Name="APLICA_BUS" ColumnName="APLICA_BUS" />
+          <ScalarProperty Name="FECHA_FIN" ColumnName="FECHA_FIN" />
+          <ScalarProperty Name="FECHA_INICIO" ColumnName="FECHA_INICIO" />
+          <ScalarProperty Name="NOMBRE_EVENTO" ColumnName="NOMBRE_EVENTO" />
+          <ScalarProperty Name="EVENTO" ColumnName="EVENTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EVE01_EVENTO_OPCION">
+      <EntityTypeMapping TypeName="ModeloEvento.EVE01_EVENTO_OPCION">
+        <MappingFragment StoreEntitySet="EVE01_EVENTO_OPCION">
+          <ScalarProperty Name="FECHA_MODIFICACION" ColumnName="FECHA_MODIFICACION" />
+          <ScalarProperty Name="USUARIO_MODIFICACION" ColumnName="USUARIO_MODIFICACION" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="USUARIO_CREACION" ColumnName="USUARIO_CREACION" />
+          <ScalarProperty Name="ESTADO_REGISTRO" ColumnName="ESTADO_REGISTRO" />
+          <ScalarProperty Name="ES_TRANSPORTE" ColumnName="ES_TRANSPORTE" />
+          <ScalarProperty Name="OBLIGATORIO" ColumnName="OBLIGATORIO" />
+          <ScalarProperty Name="PRECIO" ColumnName="PRECIO" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="EVENTO" ColumnName="EVENTO" />
+          <ScalarProperty Name="OPCION" ColumnName="OPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EVE01_INSCRIPCION">
+      <EntityTypeMapping TypeName="ModeloEvento.EVE01_INSCRIPCION">
+        <MappingFragment StoreEntitySet="EVE01_INSCRIPCION">
+          <ScalarProperty Name="FECHA_MODIFICACION" ColumnName="FECHA_MODIFICACION" />
+          <ScalarProperty Name="USUARIO_MODIFICACION" ColumnName="USUARIO_MODIFICACION" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="USUARIO_CREACION" ColumnName="USUARIO_CREACION" />
+          <ScalarProperty Name="ESTADO_REGISTRO" ColumnName="ESTADO_REGISTRO" />
+          <ScalarProperty Name="FECHA_INSCRIPCION" ColumnName="FECHA_INSCRIPCION" />
+          <ScalarProperty Name="PARTICIPANTE" ColumnName="PARTICIPANTE" />
+          <ScalarProperty Name="EVENTO" ColumnName="EVENTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EVE01_INSCRIPCION_OPCION">
+      <EntityTypeMapping TypeName="ModeloEvento.EVE01_INSCRIPCION_OPCION">
+        <MappingFragment StoreEntitySet="EVE01_INSCRIPCION_OPCION">
+          <ScalarProperty Name="FECHA_MODIFICACION" ColumnName="FECHA_MODIFICACION" />
+          <ScalarProperty Name="USUARIO_MODIFICACION" ColumnName="USUARIO_MODIFICACION" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="USUARIO_CREACION" ColumnName="USUARIO_CREACION" />
+          <ScalarProperty Name="ESTADO_REGISTRO" ColumnName="ESTADO_REGISTRO" />
+          <ScalarProperty Name="OPCION" ColumnName="OPCION" />
+          <ScalarProperty Name="EVENTO" ColumnName="EVENTO" />
+          <ScalarProperty Name="PARTICIPANTE" ColumnName="PARTICIPANTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EVE01_PARTICIPANTE">
+      <EntityTypeMapping TypeName="ModeloEvento.EVE01_PARTICIPANTE">
+        <MappingFragment StoreEntitySet="EVE01_PARTICIPANTE">
+          <ScalarProperty Name="FECHA_MODIFICACION" ColumnName="FECHA_MODIFICACION" />
+          <ScalarProperty Name="USUARIO_MODIFICACION" ColumnName="USUARIO_MODIFICACION" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="USUARIO_CREACION" ColumnName="USUARIO_CREACION" />
+          <ScalarProperty Name="ESTADO_REGISTRO" ColumnName="ESTADO_REGISTRO" />
+          <ScalarProperty Name="OBSERVACIONES" ColumnName="OBSERVACIONES" />
+          <ScalarProperty Name="ALERJICO" ColumnName="ALERJICO" />
+          <ScalarProperty Name="FECHA_NACIMIENTO" ColumnName="FECHA_NACIMIENTO" />
+          <ScalarProperty Name="GENERO" ColumnName="GENERO" />
+          <ScalarProperty Name="TALLA" ColumnName="TALLA" />
+          <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+          <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="PARTICIPANTE" ColumnName="PARTICIPANTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EVE01_EVENTO_ACTUALIZACION">
+      <EntityTypeMapping TypeName="ModeloEvento.EVE01_EVENTO_ACTUALIZACION">
+        <MappingFragment StoreEntitySet="EVE01_EVENTO_ACTUALIZACION">
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="USUARIO_CREACION" ColumnName="USUARIO_CREACION" />
+          <ScalarProperty Name="ESTADO_REGISTO" ColumnName="ESTADO_REGISTO" />
+          <ScalarProperty Name="PARTICIPANTE" ColumnName="PARTICIPANTE" />
+          <ScalarProperty Name="EVENTO" ColumnName="EVENTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EVE01_AREA_SERVICIO">
+      <EntityTypeMapping TypeName="ModeloEvento.EVE01_AREA_SERVICIO">
+        <MappingFragment StoreEntitySet="EVE01_AREA_SERVICIO">
+          <ScalarProperty Name="FECHA_MODIFICACION" ColumnName="FECHA_MODIFICACION" />
+          <ScalarProperty Name="USUARIO_MODIFICACION" ColumnName="USUARIO_MODIFICACION" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="USUARIO_CREACION" ColumnName="USUARIO_CREACION" />
+          <ScalarProperty Name="ESTADO_REGISTRO" ColumnName="ESTADO_REGISTRO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="AREA" ColumnName="AREA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EVE01_ESTADO">
+      <EntityTypeMapping TypeName="ModeloEvento.EVE01_ESTADO">
+        <MappingFragment StoreEntitySet="EVE01_ESTADO">
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="USUARIO_CREACION" ColumnName="USUARIO_CREACION" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EVE01_PARTICIPANTE_SERVICIO">
+      <EntityTypeMapping TypeName="ModeloEvento.EVE01_PARTICIPANTE_SERVICIO">
+        <MappingFragment StoreEntitySet="EVE01_PARTICIPANTE_SERVICIO">
+          <ScalarProperty Name="FECHA_MODIFICACION" ColumnName="FECHA_MODIFICACION" />
+          <ScalarProperty Name="USUARIO_MODIFICACION" ColumnName="USUARIO_MODIFICACION" />
+          <ScalarProperty Name="FECHA_CREACION" ColumnName="FECHA_CREACION" />
+          <ScalarProperty Name="USUARIO_CREACION" ColumnName="USUARIO_CREACION" />
+          <ScalarProperty Name="ESTADO_REGISTRO" ColumnName="ESTADO_REGISTRO" />
+          <ScalarProperty Name="AREA_SERVICIO" ColumnName="AREA_SERVICIO" />
+          <ScalarProperty Name="PARTICIPANTE" ColumnName="PARTICIPANTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
